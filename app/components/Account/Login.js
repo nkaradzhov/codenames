@@ -45,7 +45,7 @@ class Login extends React.Component {
       <div className="login-container container">
         <div className="panel">
           <div className="panel-body">
-            <Messages messages={this.props.messages}/>
+            <Messages/>
             <form onSubmit={this.handleLogin.bind(this)}>
               <legend>Log In</legend>
               <div className="form-group">

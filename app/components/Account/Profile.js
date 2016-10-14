@@ -56,7 +56,7 @@ class Profile extends React.Component {
       <div className="container">
         <div className="panel">
           <div className="panel-body">
-            <Messages messages={this.props.messages}/>
+            <Messages/>
             <form onSubmit={this.handleProfileUpdate.bind(this)} className="form-horizontal">
               <legend>Profile Information</legend>
               <div className="form-group">

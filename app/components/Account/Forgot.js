@@ -23,7 +23,7 @@ class Forgot extends React.Component {
       <div className="container">
         <div className="panel">
           <div className="panel-body">
-            <Messages messages={this.props.messages} />
+            <Messages />
             <form onSubmit={this.handleForgot.bind(this)}>
               <legend>Forgot Password</legend>
               <div className="form-group">

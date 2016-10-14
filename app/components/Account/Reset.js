@@ -23,7 +23,7 @@ class Reset extends React.Component {
       <div className="container">
         <div className="panel">
           <div className="panel-body">
-            <Messages messages={this.props.messages}/>
+            <Messages/>
             <form onSubmit={this.handleReset.bind(this)}>
               <legend>Reset Password</legend>
               <div className="form-group">
@@ -50,4 +50,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Reset);
-
