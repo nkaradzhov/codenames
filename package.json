@@ -6,7 +6,8 @@
     "build": "webpack --display-error-details",
     "postinstall": "npm run build",
     "start": "node server.js",
-    "start:production": "pm2 start server.js -i 4"
+    "start:production": "pm2 start server.js -i 4",
+    "restart": "webpack --display-error-details && node server.js"
   },
   "dependencies": {
     "async": "^1.5.2",
