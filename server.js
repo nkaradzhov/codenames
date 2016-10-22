@@ -40,7 +40,6 @@ var app = express();
 
 var compiler = webpack(config);
 var server = require('http').Server(app);
-var io = require('socket.io').listen(server);
 
 mongoose.connect(process.env.MONGODB);
 mongoose.connection.on('error', function() {
@@ -135,12 +134,7 @@ if (app.get('env') === 'production') {
   });
 }
 
-io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
+require('./gameserver')(server)
 
 server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

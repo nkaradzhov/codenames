@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
     './app/main'
