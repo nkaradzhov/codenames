@@ -11,3 +11,17 @@ export function gameRoomAdded(gameRoom) {
     gameRoom: gameRoom
   }
 }
+
+export function setCurrentGameRoom(gameRoom) {
+  return {
+    type: 'SET_CURRENT_GAMEROOM',
+    gameRoom: gameRoom
+  }
+}
+
+export function gameRoomPlayers(players) {
+  return {
+    type: 'GAMEROOM_PLAYERS',
+    players: players
+  }
+}

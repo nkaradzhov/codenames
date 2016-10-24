@@ -1,27 +1,31 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {gameRooms, gameRoomAdded} from '../actions/lobby'
+import {gameRooms, gameRoomAdded, setCurrentGameRoom } from '../actions/lobby'
+import { Link } from 'react-router';
 
 class Lobby extends React.Component {
 
   componentDidMount() {
     var dispatch = this.props.dispatch
-    this.channel = io('/gameRooms')
-    this.channel.on('gameRooms', function(grs) {
+    this.context.channel.on('gameRooms', function(grs) {
       dispatch(gameRooms(grs))
     })
-    this.channel.on('gameRoom added', function(gr) {
+    this.context.channel.on('gameRoom added', function(gr) {
       dispatch(gameRoomAdded(gr))
     })
   }
 
   createGameRoom() {
-    this.channel.emit('create')
+    this.context.channel.emit('createRoom')
+  }
+
+  setCurrentGameRoom(gameRoom) {
+    this.props.dispatch(setCurrentGameRoom(gameRoom))
   }
 
   render() {
     const gameRooms = this.props.gameRooms.map(gameRoom => (
-      <li key={gameRoom.id}>{gameRoom.name}</li>
+      <li onClick={()=>this.setCurrentGameRoom(gameRoom)} key={gameRoom.id}><Link to={`/gameRoom/${gameRoom.id}`}>{gameRoom.name}</Link></li>
     ))
     return (
       <div>
@@ -33,7 +37,12 @@ class Lobby extends React.Component {
   }
 }
 
+Lobby.contextTypes = {
+  channel: React.PropTypes.object
+}
+
 const mapStateToProps = (state, ownProps) => ({
   gameRooms: state.gameRooms
 })
+
 export default connect(mapStateToProps)(Lobby);
