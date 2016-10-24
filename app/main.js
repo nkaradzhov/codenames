@@ -5,15 +5,15 @@ import { Provider } from 'react-redux'
 import { Router, browserHistory } from 'react-router';
 import configureStore from './store/configureStore';
 import getRoutes from './routes';
-import Socket from './components/Socket'
+import SocketApi from './components/SocketApi'
 
 const store = configureStore(window.INITIAL_STATE);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Socket namespace="/lobby">
+    <SocketApi>
       <Router history={browserHistory} routes={getRoutes(store)}/>
-    </Socket>
+    </SocketApi>
   </Provider>,
   document.getElementById('app')
 );

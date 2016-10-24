@@ -1,31 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {gameRooms, gameRoomAdded, setCurrentGameRoom } from '../actions/lobby'
+import { setCurrentGameRoom } from '../actions/socketapi'
 import { Link } from 'react-router';
 
 class Lobby extends React.Component {
 
-  componentDidMount() {
-    var dispatch = this.props.dispatch
-    this.context.channel.on('gameRooms', function(grs) {
-      dispatch(gameRooms(grs))
-    })
-    this.context.channel.on('gameRoom added', function(gr) {
-      dispatch(gameRoomAdded(gr))
-    })
-  }
-
   createGameRoom() {
-    this.context.channel.emit('createRoom')
+    this.context.channel.emit('create')
   }
 
   setCurrentGameRoom(gameRoom) {
     this.props.dispatch(setCurrentGameRoom(gameRoom))
+    this.props.history.push(`/gameRoom/${gameRoom.id}`)
   }
 
   render() {
     const gameRooms = this.props.gameRooms.map(gameRoom => (
-      <li onClick={()=>this.setCurrentGameRoom(gameRoom)} key={gameRoom.id}><Link to={`/gameRoom/${gameRoom.id}`}>{gameRoom.name}</Link></li>
+      <li onClick={()=>this.setCurrentGameRoom(gameRoom)} key={gameRoom.id}>
+        {gameRoom.name}
+        [{gameRoom.players.map(p=> p.player.name).join(' ')}]
+      </li>
     ))
     return (
       <div>

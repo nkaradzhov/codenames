@@ -9,18 +9,15 @@ module.exports = {
   findRoom: findRoom,
   getRooms: getRooms,
   joinRoom: joinRoom,
-  leaveRoom: leaveRoom
+  leaveRooms: leaveRooms
 };
 
-function leaveRoom(id, playerId) {
-  var room = findRoom(id)
-  if (!room)
-    return false
-  room.players = room.players.filter(function(p) {
-    return p.player._id !== playerId
+function leaveRooms(playerId) {
+  rooms.forEach(function(room) {
+    room.players = room.players.filter(function(p) {
+      return p.player._id !== playerId
+    })
   })
-
-  return true //no need :D
 }
 
 function joinRoom(id, player) {
@@ -28,15 +25,13 @@ function joinRoom(id, player) {
   if (!room)
     return false
 
-  if (playerIsInRoom(room, player))
-    return false
+  if (!playerIsInRoom(room, player))
+    room.players.push({
+      player: player,
+      position: 'observer'
+    })
 
-  room.players.push({
-    player: player,
-    position: 'observer'
-  })
-
-  return true
+  return room
 }
 
 function playerIsInRoom(room, player) {
@@ -58,7 +53,7 @@ function findRoom(id) {
 
 function createRoom() {
   var room = {
-    name: generateName(gameRooms),
+    name: generateName(rooms),
     id: uuid.v4(),
     players: []
   }

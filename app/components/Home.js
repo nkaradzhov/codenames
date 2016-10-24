@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import Messages from './Messages';
+import { Link } from 'react-router';
 
 class Home extends React.Component {
   render() {
@@ -8,6 +9,7 @@ class Home extends React.Component {
       <div className="container-fluid">
         <Messages messages={this.props.messages}/>
         <div className="row">
+          <Link to="/lobby">Lobby</Link>
           <div className="col-sm-4">
             <div className="panel">
               <div className="panel-body">

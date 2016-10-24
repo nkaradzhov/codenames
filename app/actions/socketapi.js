@@ -25,3 +25,10 @@ export function gameRoomPlayers(players) {
     players: players
   }
 }
+
+export function apiError(msg) {
+  return {
+    type: 'API_ERROR',
+    messages: [{msg}]
+  }
+}
