@@ -18,9 +18,22 @@ module.exports = function(httpServer) {
     socket.emit('rooms', gameRooms.getRooms())
     socket.on('create', create)
     socket.on('join', join(socket))
+    socket.on('become observer', become('observer'))
+    socket.on('become red tell', become('red tell'))
+    socket.on('become red guess', become('red guess'))
+    socket.on('become blue tell', become('blue tell'))
+    socket.on('become blue guess', become('blue guess'))
+
     socket.on('disconnect', leave(socket))
 
   })
+
+  function become(position) {
+    return function(options) {
+      var room = gameRooms.updatePlayerPosition(options.roomId, options.playerId, position)
+      channel.emit('room updated', room)
+    }
+  }
 
   function leave(socket) {
     return function() {

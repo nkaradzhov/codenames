@@ -12,17 +12,10 @@ export function gameRoomAdded(gameRoom) {
   }
 }
 
-export function setCurrentGameRoom(gameRoom) {
+export function gameRoomUpdated(room) {
   return {
-    type: 'SET_CURRENT_GAMEROOM',
-    gameRoom: gameRoom
-  }
-}
-
-export function gameRoomPlayers(players) {
-  return {
-    type: 'GAMEROOM_PLAYERS',
-    players: players
+    type: 'GAMEROOM_UPDATED',
+    room: room
   }
 }
 

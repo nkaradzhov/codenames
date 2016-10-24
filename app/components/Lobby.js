@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import { setCurrentGameRoom } from '../actions/socketapi'
 import { Link } from 'react-router';
 
 class Lobby extends React.Component {
@@ -9,14 +8,13 @@ class Lobby extends React.Component {
     this.context.channel.emit('create')
   }
 
-  setCurrentGameRoom(gameRoom) {
-    this.props.dispatch(setCurrentGameRoom(gameRoom))
+  navigate(gameRoom) {
     this.props.history.push(`/gameRoom/${gameRoom.id}`)
   }
 
   render() {
     const gameRooms = this.props.gameRooms.map(gameRoom => (
-      <li onClick={()=>this.setCurrentGameRoom(gameRoom)} key={gameRoom.id}>
+      <li onClick={()=>this.navigate(gameRoom)} key={gameRoom.id}>
         {gameRoom.name}
         [{gameRoom.players.map(p=> p.player.name).join(' ')}]
       </li>

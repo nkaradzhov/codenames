@@ -9,8 +9,29 @@ module.exports = {
   findRoom: findRoom,
   getRooms: getRooms,
   joinRoom: joinRoom,
-  leaveRooms: leaveRooms
+  leaveRooms: leaveRooms,
+  updatePlayerPosition: updatePlayerPosition
 };
+
+function updatePlayerPosition(roomId, playerId, position) {
+  var room = findRoom(roomId)
+
+  var isOk = true
+  var player
+
+  room.players.forEach(function(p) {
+    if(p.player._id === playerId)
+      player = p
+
+    if(p.position !== 'observer' && p.position === position)
+      isOk = false
+  })
+
+  if(isOk)
+    player.position = position
+
+  return room
+}
 
 function leaveRooms(playerId) {
   rooms.forEach(function(room) {
