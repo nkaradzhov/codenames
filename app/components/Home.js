@@ -9,7 +9,13 @@ class Home extends React.Component {
       <div className="container-fluid">
         <Messages messages={this.props.messages}/>
         <div className="row">
-          <Link to="/lobby">Lobby</Link>
+        <div className="jumbotron">
+          <div className="container">
+            <h1>Hello, stranger!</h1>
+            <p>...</p>
+            <p><Link className="btn btn-primary btn-lg" to="/lobby" role="button">Go to the Lobby</Link></p>
+          </div>
+        </div>
           <div className="col-sm-4">
             <div className="panel">
               <div className="panel-body">

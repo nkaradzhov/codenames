@@ -110,11 +110,7 @@ class GameRoom extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-sm-4 col-sm-offset-8">
-                <button type="button" className="btn btn-primary">Start Game</button>
-              </div>
-            </div>
+            <button type="button" className="btn btn-primary">Start Game</button>
           </div>
         </div>
       </div>
