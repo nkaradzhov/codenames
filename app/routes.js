@@ -38,7 +38,7 @@ export default function getRoutes(store) {
       <Route path="/forgot" component={Forgot} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/lobby" component={Lobby} onEnter={ensureAuthenticated} onLeave={clearMessages} />
-      <Route path="/gameRoom/:roomId" component={GameRoom} onEnter={ensureAuthenticated} onLeave={clearMessages} />
+      <Route path="/lobby/:roomId" component={GameRoom} onEnter={ensureAuthenticated} onLeave={clearMessages} />
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );

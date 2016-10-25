@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ca685a7d71e9a085d22b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c54d4a628761271f05d6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -6746,14 +6746,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Messages.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Messages.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Messages.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Messages.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -32159,14 +32159,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Forgot.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Forgot.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Forgot.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Forgot.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -32318,14 +32318,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Login.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Login.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Login.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Login.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -32550,14 +32550,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Profile.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Profile.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Profile.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Profile.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -32966,14 +32966,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Reset.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Reset.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Reset.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Reset.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33132,14 +33132,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Signup.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Signup.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Signup.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Signup.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33372,14 +33372,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/App.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/App.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/App.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/App.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33472,14 +33472,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Contact.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Contact.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Contact.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Contact.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33656,14 +33656,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Footer.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Footer.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Footer.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Footer.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33754,14 +33754,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/GameRoom.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/GameRoom.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/GameRoom.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/GameRoom.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33980,17 +33980,9 @@
 	              )
 	            ),
 	            _react3.default.createElement(
-	              'div',
-	              { className: 'row' },
-	              _react3.default.createElement(
-	                'div',
-	                { className: 'col-sm-4 col-sm-offset-8' },
-	                _react3.default.createElement(
-	                  'button',
-	                  { type: 'button', className: 'btn btn-primary' },
-	                  'Start Game'
-	                )
-	              )
+	              'button',
+	              { type: 'button', className: 'btn btn-primary' },
+	              'Start Game'
 	            )
 	          )
 	        )
@@ -34064,14 +34056,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Header.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Header.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Header.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Header.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -34187,7 +34179,7 @@
 	            _react3.default.createElement(
 	              _reactRouter.IndexLink,
 	              { to: '/', className: 'navbar-brand' },
-	              'Project name'
+	              'Codenames'
 	            )
 	          ),
 	          _react3.default.createElement(
@@ -34203,6 +34195,15 @@
 	                  _reactRouter.IndexLink,
 	                  { to: '/', activeStyle: active },
 	                  'Home'
+	                )
+	              ),
+	              _react3.default.createElement(
+	                'li',
+	                null,
+	                _react3.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/lobby', activeStyle: active },
+	                  'Lobby'
 	                )
 	              ),
 	              _react3.default.createElement(
@@ -34286,14 +34287,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Home.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Home.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Home.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Home.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -34325,9 +34326,31 @@
 	          'div',
 	          { className: 'row' },
 	          _react3.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/lobby' },
-	            'Lobby'
+	            'div',
+	            { className: 'jumbotron' },
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'container' },
+	              _react3.default.createElement(
+	                'h1',
+	                null,
+	                'Hello, stranger!'
+	              ),
+	              _react3.default.createElement(
+	                'p',
+	                null,
+	                '...'
+	              ),
+	              _react3.default.createElement(
+	                'p',
+	                null,
+	                _react3.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'btn btn-primary btn-lg', to: '/lobby', role: 'button' },
+	                  'Go to the Lobby'
+	                )
+	              )
+	            )
 	          ),
 	          _react3.default.createElement(
 	            'div',
@@ -34478,14 +34501,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Lobby.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Lobby.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Lobby.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Lobby.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -34520,9 +34543,10 @@
 	    key: 'roomPlayers',
 	    value: function roomPlayers(players) {
 	      return players.map(function (p) {
+	        var color = p.position === 'observer' ? 'label-default' : p.position.indexOf('red') > -1 ? 'label-danger' : 'label-primary';
 	        return _react3.default.createElement(
 	          'span',
-	          { key: p.player._id, className: 'label label-default' },
+	          { key: p.player._id, style: { 'margin-right': '.5em' }, className: 'label ' + color },
 	          p.player.name
 	        );
 	      });
@@ -34575,7 +34599,7 @@
 	                null,
 	                _react3.default.createElement(
 	                  _reactRouter.Link,
-	                  { to: '/gameRoom/' + r.id },
+	                  { to: '/lobby/' + r.id },
 	                  r.name
 	                )
 	              ),
@@ -34608,12 +34632,12 @@
 	            'div',
 	            { className: 'panel-body' },
 	            _react3.default.createElement(_Messages2.default, null),
+	            gameRooms,
 	            _react3.default.createElement(
 	              'button',
-	              { onClick: this.createGameRoom.bind(this) },
+	              { type: 'button', className: 'btn btn-primary', onClick: this.createGameRoom.bind(this) },
 	              'Create Game Room'
-	            ),
-	            gameRooms
+	            )
 	          )
 	        )
 	      );
@@ -34718,14 +34742,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/SocketApi.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/SocketApi.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/SocketApi.js',
+	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/SocketApi.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -35060,7 +35084,7 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: '/forgot', component: _Forgot2.default, onEnter: skipIfAuthenticated, onLeave: clearMessages }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/reset/:token', component: _Reset2.default, onEnter: skipIfAuthenticated, onLeave: clearMessages }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/lobby', component: _Lobby2.default, onEnter: ensureAuthenticated, onLeave: clearMessages }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/gameRoom/:roomId', component: _GameRoom2.default, onEnter: ensureAuthenticated, onLeave: clearMessages }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/lobby/:roomId', component: _GameRoom2.default, onEnter: ensureAuthenticated, onLeave: clearMessages }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFound2.default, onLeave: clearMessages })
 	  );
 	}

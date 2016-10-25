@@ -38,7 +38,7 @@ class Lobby extends React.Component {
             <tr key={r.id}>
               <th>{i}</th>
               <td>
-                <Link to={`/gameRoom/${r.id}`}>
+                <Link to={`/lobby/${r.id}`}>
                   {r.name}
                 </Link>
               </td>
