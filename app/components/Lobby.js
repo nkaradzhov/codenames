@@ -18,7 +18,7 @@ class Lobby extends React.Component {
       const color = p.position === 'observer'? 'label-default'
       : p.position.indexOf('red') > -1 ? 'label-danger'
       : 'label-primary'
-      return <span key={p.player._id} style={{'margin-right':'.5em'}} className={`label ${color}`}>{p.player.name}</span>
+      return <span key={p.player._id} style={{'marginRight':'.5em'}} className={`label ${color}`}>{p.player.name}</span>
     })
   }
 
