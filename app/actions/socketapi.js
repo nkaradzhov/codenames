@@ -19,6 +19,13 @@ export function gameRoomUpdated(room) {
   }
 }
 
+export function gameRoomsUpdated(rooms) {
+  return {
+    type: 'GAMEROOMS_UPDATED',
+    rooms: rooms
+  }
+}
+
 export function apiError(msg) {
   return {
     type: 'API_ERROR',

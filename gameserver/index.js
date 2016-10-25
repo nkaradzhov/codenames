@@ -1,4 +1,4 @@
-var gameRooms = require('./grs')
+var gameRooms = require('./gamerooms')
 
 var links = {}
 
@@ -38,8 +38,8 @@ module.exports = function(httpServer) {
   function leave(socket) {
     return function() {
       var playerId = links[socket.id]
-      gameRooms.leaveRooms(playerId)
-      channel.emit('rooms', gameRooms.getRooms())
+      var updatedRooms = gameRooms.leaveRooms(playerId)
+      channel.emit('rooms updated', updatedRooms)
     }
   }
 
@@ -52,7 +52,7 @@ module.exports = function(httpServer) {
       var room = gameRooms.joinRoom(options.roomId, options.player)
       if (room) {
         socket.join(options.roomId)
-        channel.emit('rooms', gameRooms.getRooms())
+        channel.emit('room updated', room)
       } else {
         socket.emit('warn', 'room does not exist')
       }

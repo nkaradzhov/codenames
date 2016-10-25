@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { gameRooms, gameRoomAdded, gameRoomUpdated, apiError } from '../actions/socketapi'
+import { gameRooms, gameRoomAdded, gameRoomUpdated, gameRoomsUpdated, apiError } from '../actions/socketapi'
 
 
 class SocketApi extends React.Component {
@@ -11,6 +11,7 @@ class SocketApi extends React.Component {
     this.channel.on('rooms', rooms => this.props.dispatch(gameRooms(rooms)))
     this.channel.on('room added', room => this.props.dispatch(gameRoomAdded(room)))
     this.channel.on('room updated', room => this.props.dispatch(gameRoomUpdated(room)))
+    this.channel.on('rooms updated', room => this.props.dispatch(gameRoomsUpdated(room)))
     this.channel.on('warn', error => this.props.dispatch(apiError(error)))
   }
 
