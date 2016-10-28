@@ -9,10 +9,6 @@ class Lobby extends React.Component {
     this.context.channel.emit('create')
   }
 
-  navigate(gameRoom) {
-    this.props.history.push(`/gameRoom/${gameRoom.id}`)
-  }
-
   roomPlayers(players) {
     return players.map(p => {
       const color = p.position === 'observer'? 'label-default'

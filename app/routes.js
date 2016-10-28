@@ -11,6 +11,7 @@ import Forgot from './components/Account/Forgot';
 import Reset from './components/Account/Reset';
 import Lobby from './components/Lobby';
 import GameRoom from './components/GameRoom';
+import Game from './components/Game/Game';
 
 export default function getRoutes(store) {
   const ensureAuthenticated = (nextState, replace) => {
@@ -39,6 +40,7 @@ export default function getRoutes(store) {
       <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path="/lobby" component={Lobby} onEnter={ensureAuthenticated} onLeave={clearMessages} />
       <Route path="/lobby/:roomId" component={GameRoom} onEnter={ensureAuthenticated} onLeave={clearMessages} />
+      <Route path="/lobby/:roomId/game" component={Game} onEnter={ensureAuthenticated} onLeave={clearMessages} />
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );

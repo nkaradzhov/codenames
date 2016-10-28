@@ -1,0 +1,62 @@
+:root {
+  --vw: 100vmin;
+  --base: #eadaca;
+}
+
+.board {
+  width: var(--vw);
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid #9E8E7E;
+  border-radius: .3em;
+  background-color: var(--base);
+  margin: 1px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc( calc( var(--vw) / 5) - 7px);
+  height: calc( calc( var(--vw) / 10) - 7px);
+  font-size: calc(var(--vw) / 30);
+  font-variant: small-caps;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.card-red {
+  color: tomato;
+  border: 2px solid #B31700;
+}
+
+.card-blue {
+  color: steelblue;
+  border: 2px solid #003668;
+}
+
+.card-assassin {
+  color: black;
+  border: 2px solid;
+}
+
+.card-neutral {
+  color: yellow;
+  border: 2px solid #B3B300;
+}
+
+.card-revealed {
+  text-decoration: line-through;
+  background-color: currentColor;
+}
+
+.card-revealed:hover {
+  background-color: var(--base);
+  border: 2px solid #9E8E7E;
+}

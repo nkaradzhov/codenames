@@ -2,7 +2,11 @@ var uuid = require('node-uuid');
 var Moniker = require('moniker');
 var names = Moniker.generator([Moniker.adjective, Moniker.noun]);
 
+var Game = require('./game')
+var generateCards = require('./game/cards-generator')
+
 var rooms = []
+var games = {}
 
 module.exports = {
   createRoom: createRoom,
@@ -10,8 +14,18 @@ module.exports = {
   getRooms: getRooms,
   joinRoom: joinRoom,
   leaveRooms: leaveRooms,
-  updatePlayerPosition: updatePlayerPosition
+  updatePlayerPosition: updatePlayerPosition,
+  startGame: startGame
 };
+
+function startGame(roomId) {
+  var game = games[roomId]
+
+  if(!game)
+    game = games[roomId] = new Game(generateCards())
+
+  return game
+}
 
 function updatePlayerPosition(roomId, playerId, position) {
   var room = findRoom(roomId)
@@ -33,14 +47,16 @@ function updatePlayerPosition(roomId, playerId, position) {
   return room
 }
 
-function leaveRooms(playerId) {
+function leaveRooms(socketId) {
+  console.log('socket leaving ', socketId);
   var updatedRooms = []
 
   rooms = rooms.map(function(room) {
     var filteredPlayers = room.players.filter(function(p) {
-      return p.player._id !== playerId
+      return p.player.socketId !== socketId
     })
     if(room.players.length !== filteredPlayers.length) {
+      console.log('leaving ', room.name);
       room.players = filteredPlayers
       updatedRooms.push(room)
     }

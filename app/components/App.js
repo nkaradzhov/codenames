@@ -4,11 +4,11 @@ import Footer from './Footer';
 
 class App extends React.Component {
   render() {
+        // <Footer/>
     return (
       <div>
         <Header/>
         {this.props.children}
-        <Footer/>
       </div>
     );
   }

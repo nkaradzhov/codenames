@@ -19,10 +19,11 @@ export function gameRoomUpdated(room) {
   }
 }
 
-export function gameRoomsUpdated(rooms) {
+export function gameUpdated(obj) {
   return {
-    type: 'GAMEROOMS_UPDATED',
-    rooms: rooms
+    type: 'GAME_UPDATED',
+    game: obj.game,
+    roomId: obj.roomId
   }
 }
 

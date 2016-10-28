@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import Messages from './Messages';
+import NotFound from './NotFound';
 
 class GameRoom extends React.Component {
 
@@ -9,11 +10,40 @@ class GameRoom extends React.Component {
     this.emit = this.emit.bind(this)
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log('old socket ', this.props.user.socketId);
+    console.log('new socket ', nextProps.user.socketId);
+    if (!this.props.user.socketId && nextProps.user.socketId)
+      this.joinRoom(nextProps.user)
+
+    if(!this.props.currentGameRoom.game && nextProps.currentGameRoom.game)
+      this.navigateToGame()
+  }
+
   componentDidMount() {
+    if (this.props.user.socketId)
+      this.joinRoom(this.props.user)
+  }
+
+  joinRoom(user) {
+    console.log('trying to join game ', user.socketId);
     this.context.channel.emit('join', {
       roomId: this.props.params.roomId,
-      player: this.props.user
+      player: user
     })
+  }
+
+  startGame() {
+    this.emit('start game')()
+  }
+
+  joinGame() {
+    console.log('join game');
+    this.navigateToGame()
+  }
+
+  navigateToGame() {
+    this.props.history.push(`/lobby/${this.props.currentGameRoom.id}/game`)
   }
 
   emit(event) {
@@ -29,11 +59,13 @@ class GameRoom extends React.Component {
   }
 
   render() {
-    const currentGameRoom = this.props.gameRooms.filter(room => room.id === this.props.params.roomId)[0]
-    const players = currentGameRoom ? currentGameRoom.players : []
+
+    if(!this.props.currentGameRoom)
+      return <NotFound />
+
     let observers = []
     let redTell = 'take slot', blueTell = 'take slot', redGuess = 'take slot', blueGuess = 'take slot'
-    players.forEach(p => {
+    this.props.currentGameRoom.players.forEach(p => {
       if(p.position === 'observer') observers.push(p)
       if(p.position === 'red tell') redTell = p.player.name
       if(p.position === 'blue tell') blueTell = p.player.name
@@ -110,7 +142,11 @@ class GameRoom extends React.Component {
                 </div>
               </div>
             </div>
-            <button type="button" className="btn btn-primary">Start Game</button>
+            {
+              !!this.props.currentGameRoom.game ?
+                <button onClick={this.joinGame.bind(this)} type="button" className="btn btn-primary">Join Game</button> :
+                <button onClick={this.startGame.bind(this)} type="button" className="btn btn-primary">Start Game</button>
+            }
           </div>
         </div>
       </div>
@@ -125,7 +161,7 @@ GameRoom.contextTypes = {
 
 const mapStateToProps = (state, ownProps) => ({
   user: state.auth.user,
-  gameRooms: state.gameRooms
+  currentGameRoom: state.gameRooms.filter(room => room.id === ownProps.params.roomId )[0]
 })
 
 export default connect(mapStateToProps)(GameRoom);

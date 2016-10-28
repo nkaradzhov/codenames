@@ -1,7 +1,5 @@
 var gameRooms = require('./gamerooms')
 
-var links = {}
-
 module.exports = function(httpServer) {
 
   var channel = require('socket.io')
@@ -9,12 +7,7 @@ module.exports = function(httpServer) {
     .of('/gameRooms');
 
   channel.on('connection', function(socket) {
-
-    socket.on('link', function(playerId) {
-      console.log('player linked ', playerId, socket.id);
-      links[socket.id] = playerId
-    })
-
+    console.log('new connection ', socket.id);
     socket.emit('rooms', gameRooms.getRooms())
     socket.on('create', create)
     socket.on('join', join(socket))
@@ -24,9 +17,25 @@ module.exports = function(httpServer) {
     socket.on('become blue tell', become('blue tell'))
     socket.on('become blue guess', become('blue guess'))
 
+    socket.on('start game', startGame)
+
     socket.on('disconnect', leave(socket))
 
   })
+
+  function startGame(options) {
+    var room = gameRooms.findRoom(options.roomId)
+    var game = gameRooms.startGame(room.id)
+
+    room.players.forEach(function(p) {
+      var gameState = p.position.indexOf('tell') > -1 ?
+        game.getTellState() : game.getGuessState()
+        channel.to(p.player.socketId).emit('game updated',{
+          roomId: room.id,
+          game: gameState
+        })
+    })
+  }
 
   function become(position) {
     return function(options) {
@@ -37,9 +46,10 @@ module.exports = function(httpServer) {
 
   function leave(socket) {
     return function() {
-      var playerId = links[socket.id]
-      var updatedRooms = gameRooms.leaveRooms(playerId)
-      channel.emit('rooms updated', updatedRooms)
+      var updatedRooms = gameRooms.leaveRooms(socket.id)
+      updatedRooms.forEach(function(room) {
+        channel.emit('room updated', room)
+      })
     }
   }
 

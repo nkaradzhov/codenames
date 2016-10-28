@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { gameRooms, gameRoomAdded, gameRoomUpdated, gameRoomsUpdated, apiError } from '../actions/socketapi'
+import { gameRooms, gameRoomAdded, gameRoomUpdated, gameUpdated, apiError } from '../actions/socketapi'
 
 
 class SocketApi extends React.Component {
@@ -11,16 +11,14 @@ class SocketApi extends React.Component {
     this.channel.on('rooms', rooms => this.props.dispatch(gameRooms(rooms)))
     this.channel.on('room added', room => this.props.dispatch(gameRoomAdded(room)))
     this.channel.on('room updated', room => this.props.dispatch(gameRoomUpdated(room)))
-    this.channel.on('rooms updated', room => this.props.dispatch(gameRoomsUpdated(room)))
+    this.channel.on('game updated', obj => this.props.dispatch(gameUpdated(obj)))
     this.channel.on('warn', error => this.props.dispatch(apiError(error)))
-  }
-
-  componentWillReceiveProps(nextProps){
-    var user = nextProps.state.auth.user
-    if(user && user._id && !this.linked) {
-      this.channel.emit('link', user._id)
-      this.linked = true
-    }
+    this.channel.on('connect', _ =>
+      this.props.dispatch({
+        type: 'PLAYER_LINKED',
+        socketId: `/gameRooms#${this.channel.io.engine.id}`
+      })
+    )
   }
 
   getChildContext() {
