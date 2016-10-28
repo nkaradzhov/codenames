@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Messages from '../Messages';
 import NotFound from '../NotFound';
 import GameStatus from './GameStatus';
+import Hint from './Hint';
 
 class Game extends React.Component {
 
@@ -16,6 +17,7 @@ class Game extends React.Component {
         <div className="board">
           {this.renderCards(this.props.currentGameRoom.game.cards)}
         </div>
+        <Hint />
       </div>
     );
 
