@@ -30,6 +30,7 @@
     "mongoose": "^4.4.8",
     "moniker": "^0.1.2",
     "morgan": "^1.7.0",
+    "mout": "^1.0.0",
     "node-sass-middleware": "^0.9.7",
     "node-uuid": "^1.4.7",
     "nodemailer": "^2.3.0",

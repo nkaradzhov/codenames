@@ -12,10 +12,10 @@ module.exports = function(httpServer) {
     socket.on('create', create)
     socket.on('join', join(socket))
     socket.on('become observer', become('observer'))
-    socket.on('become red tell', become('red tell'))
-    socket.on('become red guess', become('red guess'))
-    socket.on('become blue tell', become('blue tell'))
-    socket.on('become blue guess', become('blue guess'))
+    socket.on('become red-tell', become('red-tell'))
+    socket.on('become red-guess', become('red-guess'))
+    socket.on('become blue-tell', become('blue-tell'))
+    socket.on('become blue-guess', become('blue-guess'))
 
     socket.on('start game', startGame)
 

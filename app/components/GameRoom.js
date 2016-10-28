@@ -11,8 +11,6 @@ class GameRoom extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('old socket ', this.props.user.socketId);
-    console.log('new socket ', nextProps.user.socketId);
     if (!this.props.user.socketId && nextProps.user.socketId)
       this.joinRoom(nextProps.user)
 
@@ -67,10 +65,10 @@ class GameRoom extends React.Component {
     let redTell = 'take slot', blueTell = 'take slot', redGuess = 'take slot', blueGuess = 'take slot'
     this.props.currentGameRoom.players.forEach(p => {
       if(p.position === 'observer') observers.push(p)
-      if(p.position === 'red tell') redTell = p.player.name
-      if(p.position === 'blue tell') blueTell = p.player.name
-      if(p.position === 'red guess') redGuess = p.player.name
-      if(p.position === 'blue guess') blueGuess = p.player.name
+      if(p.position === 'red-tell') redTell = p.player.name
+      if(p.position === 'blue-tell') blueTell = p.player.name
+      if(p.position === 'red-guess') redGuess = p.player.name
+      if(p.position === 'blue-guess') blueGuess = p.player.name
     })
 
     return (
@@ -97,7 +95,7 @@ class GameRoom extends React.Component {
               <div className="col-sm-8">
                 <div className="row">
                   <div className="col-sm-6">
-                    <div className="panel panel-default" onClick={this.emit('become red tell')}>
+                    <div className="panel panel-default" onClick={this.emit('become red-tell')}>
                       <div className="panel-heading">
                         <h3 className="panel-title red">Tell</h3>
                       </div>
@@ -107,7 +105,7 @@ class GameRoom extends React.Component {
                     </div>
                   </div>
                   <div className="col-sm-6">
-                    <div className="panel panel-default" onClick={this.emit('become blue tell')}>
+                    <div className="panel panel-default" onClick={this.emit('become blue-tell')}>
                       <div className="panel-heading">
                         <h3 className="panel-title blue">Tell</h3>
                       </div>
@@ -120,7 +118,7 @@ class GameRoom extends React.Component {
 
                 <div className="row">
                   <div className="col-sm-6">
-                    <div className="panel panel-default" onClick={this.emit('become red guess')}>
+                    <div className="panel panel-default" onClick={this.emit('become red-guess')}>
                       <div className="panel-heading">
                         <h3 className="panel-title red">Guess</h3>
                       </div>
@@ -130,7 +128,7 @@ class GameRoom extends React.Component {
                     </div>
                   </div>
                   <div className="col-sm-6">
-                    <div className="panel panel-default" onClick={this.emit('become blue guess')}>
+                    <div className="panel panel-default" onClick={this.emit('become blue-guess')}>
                       <div className="panel-heading">
                         <h3 className="panel-title blue">Guess</h3>
                       </div>

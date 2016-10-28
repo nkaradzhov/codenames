@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2e6c8b0742cf1173bf44"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "07e39f743d1cbac0f65a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -6416,14 +6416,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Messages.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Messages.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Messages.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Messages.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -32203,14 +32203,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Forgot.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Forgot.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Forgot.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Forgot.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -32362,14 +32362,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Login.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Login.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Login.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Login.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -32594,14 +32594,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Profile.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Profile.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Profile.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Profile.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33010,14 +33010,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Reset.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Reset.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Reset.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Reset.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33176,14 +33176,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Signup.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Signup.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Account/Signup.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Account/Signup.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33416,14 +33416,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/App.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/App.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/App.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/App.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33516,14 +33516,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Contact.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Contact.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Contact.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Contact.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33700,14 +33700,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Footer.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Footer.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Footer.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Footer.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33787,6 +33787,456 @@
 	
 	var _NotFound2 = _interopRequireDefault(_NotFound);
 	
+	var _GameStatus = __webpack_require__(305);
+	
+	var _GameStatus2 = _interopRequireDefault(_GameStatus);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _components = {
+	  Game: {
+	    displayName: 'Game'
+	  }
+	};
+	
+	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Game/Game.js',
+	  components: _components,
+	  locals: [module],
+	  imports: [_react3.default]
+	});
+	
+	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Game/Game.js',
+	  components: _components,
+	  locals: [],
+	  imports: [_react3.default, _redboxReact3.default]
+	});
+	
+	function _wrapComponent(id) {
+	  return function (Component) {
+	    return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
+	  };
+	}
+	
+	var Game = _wrapComponent('Game')(function (_React$Component) {
+	  _inherits(Game, _React$Component);
+	
+	  function Game() {
+	    _classCallCheck(this, Game);
+	
+	    return _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).apply(this, arguments));
+	  }
+	
+	  _createClass(Game, [{
+	    key: 'render',
+	    value: function render() {
+	      if (!this.props.currentGameRoom) return _react3.default.createElement(_NotFound2.default, null);
+	
+	      return _react3.default.createElement(
+	        'div',
+	        null,
+	        _react3.default.createElement(_GameStatus2.default, { user: this.props.user, room: this.props.currentGameRoom }),
+	        _react3.default.createElement(
+	          'div',
+	          { className: 'board' },
+	          this.renderCards(this.props.currentGameRoom.game.cards)
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'renderCards',
+	    value: function renderCards(cards) {
+	      return cards.map(function (card, i) {
+	        var style = card.type ? 'card card-' + card.type : 'card';
+	        return _react3.default.createElement(
+	          'div',
+	          { key: i, className: style },
+	          card.text
+	        );
+	      });
+	    }
+	  }]);
+	
+	  return Game;
+	}(_react3.default.Component));
+	
+	Game.contextTypes = {
+	  channel: _react3.default.PropTypes.object
+	};
+	
+	var mapStateToProps = function mapStateToProps(state, ownProps) {
+	  return {
+	    user: state.auth.user,
+	    currentGameRoom: state.gameRooms.filter(function (room) {
+	      return room.id === ownProps.params.roomId;
+	    })[0]
+	  };
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Game);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
+
+/***/ },
+/* 304 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _redboxReact2 = __webpack_require__(12);
+	
+	var _redboxReact3 = _interopRequireDefault(_redboxReact2);
+	
+	var _reactTransformCatchErrors3 = __webpack_require__(10);
+	
+	var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
+	
+	var _react2 = __webpack_require__(2);
+	
+	var _react3 = _interopRequireDefault(_react2);
+	
+	var _reactTransformHmr3 = __webpack_require__(11);
+	
+	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _components = {
+	  GameOver: {
+	    displayName: 'GameOver'
+	  }
+	};
+	
+	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Game/GameOver.js',
+	  components: _components,
+	  locals: [module],
+	  imports: [_react3.default]
+	});
+	
+	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Game/GameOver.js',
+	  components: _components,
+	  locals: [],
+	  imports: [_react3.default, _redboxReact3.default]
+	});
+	
+	function _wrapComponent(id) {
+	  return function (Component) {
+	    return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
+	  };
+	}
+	
+	var GameOver = _wrapComponent('GameOver')(function (_React$Component) {
+	  _inherits(GameOver, _React$Component);
+	
+	  function GameOver() {
+	    _classCallCheck(this, GameOver);
+	
+	    return _possibleConstructorReturn(this, (GameOver.__proto__ || Object.getPrototypeOf(GameOver)).apply(this, arguments));
+	  }
+	
+	  _createClass(GameOver, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react3.default.createElement(
+	        'h1',
+	        null,
+	        'You ',
+	        this.props.win,
+	        '!'
+	      );
+	    }
+	  }]);
+	
+	  return GameOver;
+	}(_react3.default.Component));
+	
+	exports.default = GameOver;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
+
+/***/ },
+/* 305 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _redboxReact2 = __webpack_require__(12);
+	
+	var _redboxReact3 = _interopRequireDefault(_redboxReact2);
+	
+	var _reactTransformCatchErrors3 = __webpack_require__(10);
+	
+	var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
+	
+	var _react2 = __webpack_require__(2);
+	
+	var _react3 = _interopRequireDefault(_react2);
+	
+	var _reactTransformHmr3 = __webpack_require__(11);
+	
+	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _GameOver = __webpack_require__(304);
+	
+	var _GameOver2 = _interopRequireDefault(_GameOver);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _components = {
+	  GameStatus: {
+	    displayName: 'GameStatus'
+	  }
+	};
+	
+	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Game/GameStatus.js',
+	  components: _components,
+	  locals: [module],
+	  imports: [_react3.default]
+	});
+	
+	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Game/GameStatus.js',
+	  components: _components,
+	  locals: [],
+	  imports: [_react3.default, _redboxReact3.default]
+	});
+	
+	function _wrapComponent(id) {
+	  return function (Component) {
+	    return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
+	  };
+	}
+	
+	// import GameTurn from './GameTurn';
+	
+	var GameStatus = _wrapComponent('GameStatus')(function (_React$Component) {
+	  _inherits(GameStatus, _React$Component);
+	
+	  function GameStatus() {
+	    _classCallCheck(this, GameStatus);
+	
+	    return _possibleConstructorReturn(this, (GameStatus.__proto__ || Object.getPrototypeOf(GameStatus)).apply(this, arguments));
+	  }
+	
+	  _createClass(GameStatus, [{
+	    key: 'findPlayerPosition',
+	    value: function findPlayerPosition() {
+	      var _this2 = this;
+	
+	      return this.props.room.players.filter(function (p) {
+	        return p.player._id === _this2.props.user._id;
+	      })[0].position;
+	    }
+	  }, {
+	    key: 'findPlayers',
+	    value: function findPlayers(players) {
+	      var redTell = '',
+	          blueTell = '',
+	          redGuess = '',
+	          blueGuess = '';
+	
+	      players.forEach(function (p) {
+	        if (p.position === 'red-tell') redTell = p.player.name;
+	        if (p.position === 'blue-tell') blueTell = p.player.name;
+	        if (p.position === 'red-guess') redGuess = p.player.name;
+	        if (p.position === 'blue-guess') blueGuess = p.player.name;
+	      });
+	      return { redTell: redTell, blueTell: blueTell, redGuess: redGuess, blueGuess: blueGuess };
+	    }
+	  }, {
+	    key: 'findScore',
+	    value: function findScore(game) {
+	      var redScore = game.first === 'red' ? 9 : 8;
+	      var blueScore = game.first === 'blue' ? 9 : 8;
+	      game.cards.forEach(function (card) {
+	        if (card.revealed && card.type === 'red') redScore--;
+	        if (card.revealed && card.type === 'blue') blueScore--;
+	      });
+	      return { redScore: redScore, blueScore: blueScore };
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      // this.setTitle()
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
+	      // this.setTitle()
+	    }
+	  }, {
+	    key: 'setTitle',
+	    value: function setTitle() {
+	      var _this3 = this;
+	
+	      var filtered = this.props.room.players.filter(function (player) {
+	        return player.position === _this3.props.room.game.turn;
+	      });
+	      if (filtered.length === 1) {
+	        var player = filtered[0];
+	        if (player.name === this.props.user.player.name) document.title = 'Your Turn!';else document.title = player.name + '`s turn';
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this4 = this;
+	
+	      if (this.props.room.game.winner) {
+	        var win = this.findPlayerPosition().indexOf(this.props.room.game.winner) > -1 ? 'won' : 'lost';
+	        return _react3.default.createElement(_GameOver2.default, { win: win });
+	      }
+	      // <GameTurn />
+	
+	      var _findPlayers = this.findPlayers(this.props.room.players);
+	
+	      var redTell = _findPlayers.redTell;
+	      var blueTell = _findPlayers.blueTell;
+	      var redGuess = _findPlayers.redGuess;
+	      var blueGuess = _findPlayers.blueGuess;
+	
+	      var _findScore = this.findScore(this.props.room.game);
+	
+	      var redScore = _findScore.redScore;
+	      var blueScore = _findScore.blueScore;
+	
+	      var active = function active(position) {
+	        return _this4.props.room.game.turn === position;
+	      };
+	      return _react3.default.createElement(
+	        'div',
+	        null,
+	        _react3.default.createElement(
+	          'div',
+	          { className: 'game-status' },
+	          _react3.default.createElement(
+	            'div',
+	            { className: 'horizontal' },
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'red ' + active('red-tell') },
+	              redTell
+	            ),
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'red ' + active('red-guess') },
+	              redGuess
+	            )
+	          ),
+	          _react3.default.createElement(
+	            'div',
+	            { className: 'vertical' },
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'red score' },
+	              redScore
+	            ),
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'score' },
+	              '-'
+	            ),
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'blue score' },
+	              blueScore
+	            )
+	          ),
+	          _react3.default.createElement(
+	            'div',
+	            { className: 'horizontal' },
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'blue ' + active('blue-tell') },
+	              blueTell
+	            ),
+	            _react3.default.createElement(
+	              'div',
+	              { className: 'blue ' + active('blue-guess') },
+	              blueGuess
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return GameStatus;
+	}(_react3.default.Component));
+	
+	exports.default = GameStatus;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
+
+/***/ },
+/* 306 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _redboxReact2 = __webpack_require__(12);
+	
+	var _redboxReact3 = _interopRequireDefault(_redboxReact2);
+	
+	var _reactTransformCatchErrors3 = __webpack_require__(10);
+	
+	var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
+	
+	var _react2 = __webpack_require__(2);
+	
+	var _react3 = _interopRequireDefault(_react2);
+	
+	var _reactTransformHmr3 = __webpack_require__(11);
+	
+	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _reactRedux = __webpack_require__(14);
+	
+	var _Messages = __webpack_require__(18);
+	
+	var _Messages2 = _interopRequireDefault(_Messages);
+	
+	var _NotFound = __webpack_require__(69);
+	
+	var _NotFound2 = _interopRequireDefault(_NotFound);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33802,14 +34252,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/GameRoom.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/GameRoom.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/GameRoom.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/GameRoom.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -33965,7 +34415,7 @@
 	                    { className: 'col-sm-6' },
 	                    _react3.default.createElement(
 	                      'div',
-	                      { className: 'panel panel-default', onClick: this.emit('become red tell') },
+	                      { className: 'panel panel-default', onClick: this.emit('become red-tell') },
 	                      _react3.default.createElement(
 	                        'div',
 	                        { className: 'panel-heading' },
@@ -33987,7 +34437,7 @@
 	                    { className: 'col-sm-6' },
 	                    _react3.default.createElement(
 	                      'div',
-	                      { className: 'panel panel-default', onClick: this.emit('become blue tell') },
+	                      { className: 'panel panel-default', onClick: this.emit('become blue-tell') },
 	                      _react3.default.createElement(
 	                        'div',
 	                        { className: 'panel-heading' },
@@ -34013,7 +34463,7 @@
 	                    { className: 'col-sm-6' },
 	                    _react3.default.createElement(
 	                      'div',
-	                      { className: 'panel panel-default', onClick: this.emit('become red guess') },
+	                      { className: 'panel panel-default', onClick: this.emit('become red-guess') },
 	                      _react3.default.createElement(
 	                        'div',
 	                        { className: 'panel-heading' },
@@ -34035,7 +34485,7 @@
 	                    { className: 'col-sm-6' },
 	                    _react3.default.createElement(
 	                      'div',
-	                      { className: 'panel panel-default', onClick: this.emit('become blue guess') },
+	                      { className: 'panel panel-default', onClick: this.emit('become blue-guess') },
 	                      _react3.default.createElement(
 	                        'div',
 	                        { className: 'panel-heading' },
@@ -34090,452 +34540,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
 
 /***/ },
-/* 304 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _redboxReact2 = __webpack_require__(12);
-	
-	var _redboxReact3 = _interopRequireDefault(_redboxReact2);
-	
-	var _reactTransformCatchErrors3 = __webpack_require__(10);
-	
-	var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
-	
-	var _react2 = __webpack_require__(2);
-	
-	var _react3 = _interopRequireDefault(_react2);
-	
-	var _reactTransformHmr3 = __webpack_require__(11);
-	
-	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _reactRedux = __webpack_require__(14);
-	
-	var _Messages = __webpack_require__(18);
-	
-	var _Messages2 = _interopRequireDefault(_Messages);
-	
-	var _NotFound = __webpack_require__(69);
-	
-	var _NotFound2 = _interopRequireDefault(_NotFound);
-	
-	var _GameStatus = __webpack_require__(306);
-	
-	var _GameStatus2 = _interopRequireDefault(_GameStatus);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _components = {
-	  Game: {
-	    displayName: 'Game'
-	  }
-	};
-	
-	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Game/Game.js',
-	  components: _components,
-	  locals: [module],
-	  imports: [_react3.default]
-	});
-	
-	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Game/Game.js',
-	  components: _components,
-	  locals: [],
-	  imports: [_react3.default, _redboxReact3.default]
-	});
-	
-	function _wrapComponent(id) {
-	  return function (Component) {
-	    return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
-	  };
-	}
-	
-	var Game = _wrapComponent('Game')(function (_React$Component) {
-	  _inherits(Game, _React$Component);
-	
-	  function Game() {
-	    _classCallCheck(this, Game);
-	
-	    return _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).apply(this, arguments));
-	  }
-	
-	  _createClass(Game, [{
-	    key: 'render',
-	    value: function render() {
-	      if (!this.props.currentGameRoom) return _react3.default.createElement(_NotFound2.default, null);
-	
-	      return _react3.default.createElement(
-	        'div',
-	        null,
-	        _react3.default.createElement(_GameStatus2.default, { user: this.props.user, room: this.props.currentGameRoom }),
-	        _react3.default.createElement(
-	          'div',
-	          { className: 'board' },
-	          this.renderCards(this.props.currentGameRoom.game.cards)
-	        )
-	      );
-	    }
-	  }, {
-	    key: 'renderCards',
-	    value: function renderCards(cards) {
-	      return cards.map(function (card, i) {
-	        var style = card.type ? 'card card-' + card.type : 'card';
-	        return _react3.default.createElement(
-	          'div',
-	          { key: i, className: style },
-	          card.text
-	        );
-	      });
-	    }
-	  }]);
-	
-	  return Game;
-	}(_react3.default.Component));
-	
-	Game.contextTypes = {
-	  channel: _react3.default.PropTypes.object
-	};
-	
-	var mapStateToProps = function mapStateToProps(state, ownProps) {
-	  return {
-	    user: state.auth.user,
-	    currentGameRoom: state.gameRooms.filter(function (room) {
-	      return room.id === ownProps.params.roomId;
-	    })[0]
-	  };
-	};
-	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Game);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
-
-/***/ },
-/* 305 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _redboxReact2 = __webpack_require__(12);
-	
-	var _redboxReact3 = _interopRequireDefault(_redboxReact2);
-	
-	var _reactTransformCatchErrors3 = __webpack_require__(10);
-	
-	var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
-	
-	var _react2 = __webpack_require__(2);
-	
-	var _react3 = _interopRequireDefault(_react2);
-	
-	var _reactTransformHmr3 = __webpack_require__(11);
-	
-	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _components = {
-	  GameOver: {
-	    displayName: 'GameOver'
-	  }
-	};
-	
-	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Game/GameOver.js',
-	  components: _components,
-	  locals: [module],
-	  imports: [_react3.default]
-	});
-	
-	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Game/GameOver.js',
-	  components: _components,
-	  locals: [],
-	  imports: [_react3.default, _redboxReact3.default]
-	});
-	
-	function _wrapComponent(id) {
-	  return function (Component) {
-	    return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
-	  };
-	}
-	
-	var GameOver = _wrapComponent('GameOver')(function (_React$Component) {
-	  _inherits(GameOver, _React$Component);
-	
-	  function GameOver() {
-	    _classCallCheck(this, GameOver);
-	
-	    return _possibleConstructorReturn(this, (GameOver.__proto__ || Object.getPrototypeOf(GameOver)).apply(this, arguments));
-	  }
-	
-	  _createClass(GameOver, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react3.default.createElement(
-	        'h1',
-	        null,
-	        'You ',
-	        this.props.win,
-	        '!'
-	      );
-	    }
-	  }]);
-	
-	  return GameOver;
-	}(_react3.default.Component));
-	
-	exports.default = GameOver;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
-
-/***/ },
-/* 306 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _redboxReact2 = __webpack_require__(12);
-	
-	var _redboxReact3 = _interopRequireDefault(_redboxReact2);
-	
-	var _reactTransformCatchErrors3 = __webpack_require__(10);
-	
-	var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
-	
-	var _react2 = __webpack_require__(2);
-	
-	var _react3 = _interopRequireDefault(_react2);
-	
-	var _reactTransformHmr3 = __webpack_require__(11);
-	
-	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _GameOver = __webpack_require__(305);
-	
-	var _GameOver2 = _interopRequireDefault(_GameOver);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var _components = {
-	  GameStatus: {
-	    displayName: 'GameStatus'
-	  }
-	};
-	
-	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Game/GameStatus.js',
-	  components: _components,
-	  locals: [module],
-	  imports: [_react3.default]
-	});
-	
-	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Game/GameStatus.js',
-	  components: _components,
-	  locals: [],
-	  imports: [_react3.default, _redboxReact3.default]
-	});
-	
-	function _wrapComponent(id) {
-	  return function (Component) {
-	    return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
-	  };
-	}
-	
-	// import GameTurn from './GameTurn';
-	
-	var GameStatus = _wrapComponent('GameStatus')(function (_React$Component) {
-	  _inherits(GameStatus, _React$Component);
-	
-	  function GameStatus() {
-	    _classCallCheck(this, GameStatus);
-	
-	    return _possibleConstructorReturn(this, (GameStatus.__proto__ || Object.getPrototypeOf(GameStatus)).apply(this, arguments));
-	  }
-	
-	  _createClass(GameStatus, [{
-	    key: 'findPlayerPosition',
-	    value: function findPlayerPosition() {
-	      var _this2 = this;
-	
-	      return this.props.room.players.filter(function (p) {
-	        return p.player._id === _this2.props.user._id;
-	      })[0].position;
-	    }
-	  }, {
-	    key: 'findPlayers',
-	    value: function findPlayers(players) {
-	      var redTell = '',
-	          blueTell = '',
-	          redGuess = '',
-	          blueGuess = '';
-	
-	      players.forEach(function (p) {
-	        if (p.position === 'red tell') redTell = p.player.name;
-	        if (p.position === 'blue tell') blueTell = p.player.name;
-	        if (p.position === 'red guess') redGuess = p.player.name;
-	        if (p.position === 'blue guess') blueGuess = p.player.name;
-	      });
-	      return { redTell: redTell, blueTell: blueTell, redGuess: redGuess, blueGuess: blueGuess };
-	    }
-	  }, {
-	    key: 'findScore',
-	    value: function findScore(game) {
-	      var redScore = game.first === 'red' ? 9 : 8;
-	      var blueScore = game.first === 'blue' ? 9 : 8;
-	      game.cards.forEach(function (card) {
-	        if (card.revealed && card.type === 'red') redScore--;
-	        if (card.revealed && card.type === 'blue') blueScore--;
-	      });
-	      return { redScore: redScore, blueScore: blueScore };
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      // this.setTitle()
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      // this.setTitle()
-	    }
-	  }, {
-	    key: 'setTitle',
-	    value: function setTitle() {
-	      var _this3 = this;
-	
-	      var filtered = this.props.room.players.filter(function (player) {
-	        return player.position === _this3.props.room.game.turn;
-	      });
-	      if (filtered.length === 1) {
-	        var player = filtered[0];
-	        if (player.name === this.props.user.player.name) document.title = 'Your Turn!';else document.title = player.name + '`s turn';
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	
-	      if (this.props.room.game.winner) {
-	        var win = this.findPlayerPosition().indexOf(this.props.room.game.winner) > -1 ? 'won' : 'lost';
-	        return _react3.default.createElement(_GameOver2.default, { win: win });
-	      }
-	      // <GameTurn />
-	
-	      var _findPlayers = this.findPlayers(this.props.room.players);
-	
-	      var redTell = _findPlayers.redTell;
-	      var blueTell = _findPlayers.blueTell;
-	      var redGuess = _findPlayers.redGuess;
-	      var blueGuess = _findPlayers.blueGuess;
-	
-	      var _findScore = this.findScore(this.props.room.game);
-	
-	      var redScore = _findScore.redScore;
-	      var blueScore = _findScore.blueScore;
-	
-	      return _react3.default.createElement(
-	        'div',
-	        null,
-	        _react3.default.createElement(
-	          'div',
-	          { className: 'game-status' },
-	          _react3.default.createElement(
-	            'div',
-	            { className: 'horizontal' },
-	            _react3.default.createElement(
-	              'div',
-	              { className: 'red' },
-	              redTell
-	            ),
-	            _react3.default.createElement(
-	              'div',
-	              { className: 'red' },
-	              redGuess
-	            )
-	          ),
-	          _react3.default.createElement(
-	            'div',
-	            { className: 'vertical' },
-	            _react3.default.createElement(
-	              'div',
-	              { className: 'red score' },
-	              redScore
-	            ),
-	            _react3.default.createElement(
-	              'div',
-	              { className: 'score' },
-	              '-'
-	            ),
-	            _react3.default.createElement(
-	              'div',
-	              { className: 'blue score' },
-	              blueScore
-	            )
-	          ),
-	          _react3.default.createElement(
-	            'div',
-	            { className: 'horizontal' },
-	            _react3.default.createElement(
-	              'div',
-	              { className: 'blue' },
-	              blueTell
-	            ),
-	            _react3.default.createElement(
-	              'div',
-	              { className: 'blue' },
-	              blueGuess
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return GameStatus;
-	}(_react3.default.Component));
-	
-	exports.default = GameStatus;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
-
-/***/ },
 /* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34584,14 +34588,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Header.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Header.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Header.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Header.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -34815,14 +34819,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Home.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Home.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Home.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Home.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -35029,14 +35033,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Lobby.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Lobby.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/Lobby.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/Lobby.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -35230,14 +35234,14 @@
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/SocketApi.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/SocketApi.js',
 	  components: _components,
 	  locals: [module],
 	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	  filename: 'C:/Users/hukuuu/Desktop/megaboilerplate-app/app/components/SocketApi.js',
+	  filename: '/home/hukuuu/projects/codenames/codenames/app/components/SocketApi.js',
 	  components: _components,
 	  locals: [],
 	  imports: [_react3.default, _redboxReact3.default]
@@ -35609,11 +35613,11 @@
 	
 	var _Lobby2 = _interopRequireDefault(_Lobby);
 	
-	var _GameRoom = __webpack_require__(303);
+	var _GameRoom = __webpack_require__(306);
 	
 	var _GameRoom2 = _interopRequireDefault(_GameRoom);
 	
-	var _Game = __webpack_require__(304);
+	var _Game = __webpack_require__(303);
 	
 	var _Game2 = _interopRequireDefault(_Game);
 	

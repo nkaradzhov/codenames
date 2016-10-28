@@ -12,13 +12,13 @@ class GameStatus extends React.Component {
       let redTell = '', blueTell = '', redGuess = '', blueGuess = ''
 
       players.forEach(p => {
-        if(p.position ==='red tell')
+        if(p.position ==='red-tell')
           redTell = p.player.name
-        if(p.position ==='blue tell')
+        if(p.position ==='blue-tell')
           blueTell = p.player.name
-        if(p.position ==='red guess')
+        if(p.position ==='red-guess')
           redGuess = p.player.name
-        if(p.position ==='blue guess')
+        if(p.position ==='blue-guess')
           blueGuess = p.player.name
       })
       return {redTell, blueTell, redGuess, blueGuess}
@@ -37,18 +37,18 @@ class GameStatus extends React.Component {
   }
 
   componentDidMount() {
-    // this.setTitle()
+    this.setTitle()
   }
 
   componentDidUpdate() {
-    // this.setTitle()
+    this.setTitle()
   }
 
   setTitle() {
     const filtered = this.props.room.players.filter(player => player.position === this.props.room.game.turn)
     if(filtered.length === 1) {
-      const player = filtered[0]
-      if(player.name === this.props.user.player.name)
+      const player = filtered[0].player
+      if(player.name === this.props.user.name)
         document.title = `Your Turn!`
       else
         document.title = `${player.name}\`s turn`
@@ -65,12 +65,13 @@ class GameStatus extends React.Component {
 
     const {redTell, blueTell, redGuess, blueGuess} = this.findPlayers(this.props.room.players)
     const {redScore, blueScore} = this.findScore(this.props.room.game)
+    const active = position => this.props.room.game.turn === position? 'active' : ''
     return (
       <div>
         <div className="game-status">
           <div className="horizontal">
-            <div className="red">{redTell}</div>
-            <div className="red">{redGuess}</div>
+            <div className={`red ${active('red-tell')}`}>{redTell}</div>
+            <div className={`red ${active('red-guess')}`}>{redGuess}</div>
           </div>
           <div className="vertical">
             <div className="red score">{redScore}</div>
@@ -78,8 +79,8 @@ class GameStatus extends React.Component {
             <div className="blue score">{blueScore}</div>
           </div>
           <div className="horizontal">
-            <div className="blue">{blueTell}</div>
-            <div className="blue">{blueGuess}</div>
+            <div className={`blue ${active('blue-tell')}`}>{blueTell}</div>
+            <div className={`blue ${active('blue-guess')}`}>{blueGuess}</div>
           </div>
         </div>
       </div>
