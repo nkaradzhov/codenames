@@ -7,6 +7,17 @@ import Hint from './Hint';
 
 class Game extends React.Component {
 
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.user.socketId && nextProps.user.socketId) {
+      console.log('trying to join room ', this.props.gamePosition);
+      this.context.channel.emit('join', {
+        roomId: this.props.params.roomId,
+        player: nextProps.user,
+        position: this.props.gamePosition
+      })
+    }
+  }
+
   render() {
     if(!this.props.currentGameRoom)
       return <NotFound />
@@ -20,7 +31,6 @@ class Game extends React.Component {
         <Hint />
       </div>
     );
-
   }
 
   renderCards(cards) {
@@ -38,7 +48,8 @@ Game.contextTypes = {
 
 const mapStateToProps = (state, ownProps) => ({
   user: state.auth.user,
-  currentGameRoom: state.gameRooms.filter(room => room.id === ownProps.params.roomId )[0]
+  currentGameRoom: state.gameRooms.filter(room => room.id === ownProps.params.roomId )[0],
+  gamePosition: state.gamePositions[ownProps.params.roomId]
 })
 
 export default connect(mapStateToProps)(Game);

@@ -27,9 +27,25 @@ export function gameUpdated(obj) {
   }
 }
 
+export function playerLinked(socketId) {
+  return {
+    type: 'PLAYER_LINKED',
+    socketId: socketId
+  }
+
+}
+
+export function gamePosition(roomId, position) {
+  return {
+    type: 'GAME_POSITION',
+    roomId: roomId,
+    position: position
+  }
+}
+
 export function apiError(msg) {
   return {
     type: 'API_ERROR',
-    messages: [{msg}]
+    messages: [{ msg }]
   }
 }

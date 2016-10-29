@@ -14,8 +14,9 @@ class GameRoom extends React.Component {
     if (!this.props.user.socketId && nextProps.user.socketId)
       this.joinRoom(nextProps.user)
 
-    if(!this.props.currentGameRoom.game && nextProps.currentGameRoom.game)
-      this.navigateToGame()
+    if(this.props.currentGameRoom)
+      if(!this.props.currentGameRoom.game && nextProps.currentGameRoom.game)
+        this.navigateToGame()
   }
 
   componentDidMount() {
@@ -24,10 +25,11 @@ class GameRoom extends React.Component {
   }
 
   joinRoom(user) {
-    console.log('trying to join game ', user.socketId);
+    console.log('trying to join game ', user.socketId, this.props.gamePosition);
     this.context.channel.emit('join', {
       roomId: this.props.params.roomId,
-      player: user
+      player: user,
+      position: this.props.gamePosition
     })
   }
 
@@ -159,7 +161,8 @@ GameRoom.contextTypes = {
 
 const mapStateToProps = (state, ownProps) => ({
   user: state.auth.user,
-  currentGameRoom: state.gameRooms.filter(room => room.id === ownProps.params.roomId )[0]
+  currentGameRoom: state.gameRooms.filter(room => room.id === ownProps.params.roomId )[0],
+  gamePosition: state.gamePositions[ownProps.params.roomId]
 })
 
 export default connect(mapStateToProps)(GameRoom);

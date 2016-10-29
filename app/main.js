@@ -6,8 +6,13 @@ import { Router, browserHistory } from 'react-router';
 import configureStore from './store/configureStore';
 import getRoutes from './routes';
 import SocketApi from './components/SocketApi'
+import { saveGamePositions, loadGamePositions } from './localStorage'
 
-const store = configureStore(window.INITIAL_STATE);
+const store = configureStore(Object.assign({}, window.INITIAL_STATE, {
+  gamePositions: loadGamePositions()
+}));
+
+store.subscribe(() => saveGamePositions(store.getState().gamePositions))
 
 ReactDOM.render(
   <Provider store={store}>

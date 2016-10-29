@@ -11,11 +11,11 @@ module.exports = function(httpServer) {
     socket.emit('rooms', gameRooms.getRooms())
     socket.on('create', create)
     socket.on('join', join(socket))
-    socket.on('become observer', become('observer'))
-    socket.on('become red-tell', become('red-tell'))
-    socket.on('become red-guess', become('red-guess'))
-    socket.on('become blue-tell', become('blue-tell'))
-    socket.on('become blue-guess', become('blue-guess'))
+    socket.on('become observer', become(socket, 'observer'))
+    socket.on('become red-tell', become(socket, 'red-tell'))
+    socket.on('become red-guess', become(socket, 'red-guess'))
+    socket.on('become blue-tell', become(socket, 'blue-tell'))
+    socket.on('become blue-guess', become(socket, 'blue-guess'))
 
     socket.on('start game', startGame)
 
@@ -28,19 +28,23 @@ module.exports = function(httpServer) {
     var game = gameRooms.startGame(room.id)
 
     room.players.forEach(function(p) {
-      var gameState = p.position.indexOf('tell') > -1 ?
-        game.getTellState() : game.getGuessState()
-        channel.to(p.player.socketId).emit('game updated',{
-          roomId: room.id,
-          game: gameState
-        })
+      channel.to(p.player.socketId).emit('game updated',{
+        roomId: room.id,
+        game: gameRooms.getGameState(game, p.position)
+      })
     })
   }
 
-  function become(position) {
+  function become(socket, position) {
     return function(options) {
       var room = gameRooms.updatePlayerPosition(options.roomId, options.playerId, position)
       channel.emit('room updated', room)
+      var game = gameRooms.findGame(room.id)
+      if(game)
+        socket.emit('game updated', {
+          roomId: room.id,
+          game: gameRooms.getGameState(game, position)
+        })
     }
   }
 
@@ -59,7 +63,7 @@ module.exports = function(httpServer) {
 
   function join(socket) {
     return function(options) {
-      var room = gameRooms.joinRoom(options.roomId, options.player)
+      var room = gameRooms.joinRoom(options.roomId, options.player, options.position)
       if (room) {
         socket.join(options.roomId)
         channel.emit('room updated', room)

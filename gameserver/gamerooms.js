@@ -15,13 +15,19 @@ module.exports = {
   joinRoom: joinRoom,
   leaveRooms: leaveRooms,
   updatePlayerPosition: updatePlayerPosition,
-  startGame: startGame
+  findGame: findGame,
+  startGame: startGame,
+  getGameState: getGameState,
 };
+
+function findGame(roomId) {
+  return games[roomId]
+}
 
 function startGame(roomId) {
   var game = games[roomId]
 
-  if(!game)
+  if (!game)
     game = games[roomId] = new Game(generateCards())
 
   return game
@@ -34,14 +40,14 @@ function updatePlayerPosition(roomId, playerId, position) {
   var player
 
   room.players.forEach(function(p) {
-    if(p.player._id === playerId)
+    if (p.player._id === playerId)
       player = p
 
-    if(p.position !== 'observer' && p.position === position)
+    if (p.position !== 'observer' && p.position === position)
       isOk = false
   })
 
-  if(isOk)
+  if (isOk)
     player.position = position
 
   return room
@@ -55,7 +61,7 @@ function leaveRooms(socketId) {
     var filteredPlayers = room.players.filter(function(p) {
       return p.player.socketId !== socketId
     })
-    if(room.players.length !== filteredPlayers.length) {
+    if (room.players.length !== filteredPlayers.length) {
       console.log('leaving ', room.name);
       room.players = filteredPlayers
       updatedRooms.push(room)
@@ -65,18 +71,33 @@ function leaveRooms(socketId) {
   return updatedRooms
 }
 
-function joinRoom(id, player) {
+function joinRoom(id, player, position) {
   var room = findRoom(id)
   if (!room)
     return false
 
+  var pos = 'observer'
+  if (position && !positionTaken(room, position))
+    pos = position
+
   if (!playerIsInRoom(room, player))
     room.players.push({
       player: player,
-      position: 'observer'
+      position: pos
     })
 
   return room
+}
+
+function getGameState(game, pos) {
+  return pos.indexOf('tell') > -1 ? game.getTellState() : game.getGuessState()
+}
+
+function positionTaken(room, position) {
+  return room.players.filter(function(p) {
+      return p.position === position
+    })
+    .length > 0
 }
 
 function playerIsInRoom(room, player) {
