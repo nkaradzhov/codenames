@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "568234260ddbaa383a6b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f50f7ce4a9c7e1609592"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8094,7 +8094,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function login(email, password) {
+	function login(email, password, afterPath) {
 	  return function (dispatch) {
 	    dispatch({
 	      type: 'CLEAR_MESSAGES'
@@ -8115,7 +8115,7 @@
 	            user: json.user
 	          });
 	          _reactCookie2.default.save('token', json.token, { expires: (0, _moment2.default)().add(1, 'hour').toDate() });
-	          _reactRouter.browserHistory.push('/account');
+	          _reactRouter.browserHistory.push(afterPath);
 	        });
 	      } else {
 	        return response.json().then(function (json) {
@@ -11270,7 +11270,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// Sign in with Facebook
-	function facebookLogin() {
+	function facebookLogin(afterPath) {
 	  var facebook = {
 	    url: 'http://localhost:3000/auth/facebook',
 	    clientId: '980220002068787',
@@ -11282,7 +11282,7 @@
 	  };
 	
 	  return function (dispatch) {
-	    oauth2(facebook, dispatch).then(openPopup).then(pollPopup).then(exchangeCodeForToken).then(signIn).then(closePopup);
+	    oauth2(facebook, dispatch).then(openPopup).then(pollPopup).then(exchangeCodeForToken).then(signIn(afterPath)).then(closePopup);
 	  };
 	}
 	
@@ -11470,23 +11470,25 @@
 	  });
 	}
 	
-	function signIn(_ref5) {
-	  var token = _ref5.token;
-	  var user = _ref5.user;
-	  var window = _ref5.window;
-	  var interval = _ref5.interval;
-	  var dispatch = _ref5.dispatch;
+	function signIn(afterPath) {
+	  return function signIn(_ref5) {
+	    var token = _ref5.token;
+	    var user = _ref5.user;
+	    var window = _ref5.window;
+	    var interval = _ref5.interval;
+	    var dispatch = _ref5.dispatch;
 	
-	  return new Promise(function (resolve, reject) {
-	    dispatch({
-	      type: 'OAUTH_SUCCESS',
-	      token: token,
-	      user: user
+	    return new Promise(function (resolve, reject) {
+	      dispatch({
+	        type: 'OAUTH_SUCCESS',
+	        token: token,
+	        user: user
+	      });
+	      _reactCookie2.default.save('token', token, { expires: (0, _moment2.default)().add(1, 'hour').toDate() });
+	      _reactRouter.browserHistory.push(afterPath);
+	      resolve({ window: window, interval: interval });
 	    });
-	    _reactCookie2.default.save('token', token, { expires: (0, _moment2.default)().add(1, 'hour').toDate() });
-	    _reactRouter.browserHistory.push('/');
-	    resolve({ window: window, interval: interval });
-	  });
+	  };
 	}
 	
 	function closePopup(_ref6) {
@@ -32424,12 +32426,12 @@
 	    key: 'handleLogin',
 	    value: function handleLogin(event) {
 	      event.preventDefault();
-	      this.props.dispatch((0, _auth.login)(this.state.email, this.state.password));
+	      this.props.dispatch((0, _auth.login)(this.state.email, this.state.password, '/' + this.props.params.afterPath));
 	    }
 	  }, {
 	    key: 'handleFacebook',
 	    value: function handleFacebook() {
-	      this.props.dispatch((0, _oauth.facebookLogin)());
+	      this.props.dispatch((0, _oauth.facebookLogin)('/' + this.props.params.afterPath));
 	    }
 	  }, {
 	    key: 'handleTwitter',
@@ -35898,7 +35900,7 @@
 	function getRoutes(store) {
 	  var ensureAuthenticated = function ensureAuthenticated(nextState, replace) {
 	    if (!store.getState().auth.token) {
-	      replace('/login');
+	      replace('/login' + nextState.location.pathname);
 	    }
 	  };
 	  var skipIfAuthenticated = function skipIfAuthenticated(nextState, replace) {
@@ -35916,7 +35918,7 @@
 	    { path: '/', component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default, onLeave: clearMessages }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default, onLeave: clearMessages }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default, onEnter: skipIfAuthenticated, onLeave: clearMessages }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/login/:afterPath', component: _Login2.default, onEnter: skipIfAuthenticated, onLeave: clearMessages }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/signup', component: _Signup2.default, onEnter: skipIfAuthenticated, onLeave: clearMessages }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/account', component: _Profile2.default, onEnter: ensureAuthenticated, onLeave: clearMessages }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/forgot', component: _Forgot2.default, onEnter: skipIfAuthenticated, onLeave: clearMessages }),

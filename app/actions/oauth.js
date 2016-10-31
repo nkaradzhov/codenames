@@ -5,7 +5,7 @@ import cookie from 'react-cookie';
 import { browserHistory } from 'react-router';
 
 // Sign in with Facebook
-export function facebookLogin() {
+export function facebookLogin(afterPath) {
   const facebook = {
     url: 'http://localhost:3000/auth/facebook',
     clientId: '980220002068787',
@@ -21,7 +21,7 @@ export function facebookLogin() {
       .then(openPopup)
       .then(pollPopup)
       .then(exchangeCodeForToken)
-      .then(signIn)
+      .then(signIn(afterPath))
       .then(closePopup);
   };
 }
@@ -191,18 +191,19 @@ function exchangeCodeForToken({ oauthData, config, window, interval, dispatch })
   });
 }
 
-function signIn({ token, user, window, interval, dispatch }) {
-  return new Promise((resolve, reject) => {
-    dispatch({
-      type: 'OAUTH_SUCCESS',
-      token: token,
-      user: user
+function signIn(afterPath) {
+  return function signIn({ token, user, window, interval, dispatch }) {
+    return new Promise((resolve, reject) => {
+      dispatch({
+        type: 'OAUTH_SUCCESS',
+        token: token,
+        user: user
+      });
+      cookie.save('token', token, { expires: moment().add(1, 'hour').toDate() });
+      browserHistory.push(afterPath);
+      resolve({ window: window, interval: interval });
     });
-    cookie.save('token', token, { expires: moment().add(1, 'hour').toDate() });
-    browserHistory.push('/');
-    resolve({ window: window, interval: interval });
-  });
-
+  }
 }
 
 
@@ -213,4 +214,3 @@ function closePopup({ window, interval }) {
     resolve();
   });
 }
-

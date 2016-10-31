@@ -17,11 +17,11 @@ class Login extends React.Component {
 
   handleLogin(event) {
     event.preventDefault();
-    this.props.dispatch(login(this.state.email, this.state.password));
+    this.props.dispatch(login(this.state.email, this.state.password, `/${this.props.params.afterPath}`));
   }
 
   handleFacebook() {
-    this.props.dispatch(facebookLogin())
+    this.props.dispatch(facebookLogin(`/${this.props.params.afterPath}`))
   }
 
   handleTwitter() {
