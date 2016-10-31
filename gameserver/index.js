@@ -28,10 +28,7 @@ module.exports = function(httpServer) {
     var game = gameRooms.startGame(room.id)
 
     room.players.forEach(function(p) {
-      channel.to(p.player.socketId).emit('game updated',{
-        roomId: room.id,
-        game: gameRooms.getGameState(game, p.position)
-      })
+      sendGameState(channel.to(p.player.socketId), room.id, p.position)
     })
   }
 
@@ -39,12 +36,7 @@ module.exports = function(httpServer) {
     return function(options) {
       var room = gameRooms.updatePlayerPosition(options.roomId, options.playerId, position)
       channel.emit('room updated', room)
-      var game = gameRooms.findGame(room.id)
-      if(game)
-        socket.emit('game updated', {
-          roomId: room.id,
-          game: gameRooms.getGameState(game, position)
-        })
+      sendGameState(socket, room.id, position)
     }
   }
 
@@ -67,10 +59,20 @@ module.exports = function(httpServer) {
       if (room) {
         socket.join(options.roomId)
         channel.emit('room updated', room)
+        sendGameState(socket, room.id, options.position)
       } else {
         socket.emit('warn', 'room does not exist')
       }
     }
+  }
+
+  function sendGameState(socket, roomId, position) {
+    var game = gameRooms.findGame(roomId)
+    if (game)
+      socket.emit('game updated', {
+        roomId: roomId,
+        game: gameRooms.getGameState(game, position)
+      })
   }
 
 }

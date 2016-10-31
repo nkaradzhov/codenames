@@ -19,8 +19,9 @@ class Game extends React.Component {
   }
 
   render() {
-    if(!this.props.currentGameRoom)
+    if(!this.props.currentGameRoom || !this.props.currentGameRoom.game)
       return <NotFound />
+
 
     return (
       <div>

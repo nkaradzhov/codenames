@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ea629145e6a7797eee32"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "568234260ddbaa383a6b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34215,7 +34215,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      if (!this.props.currentGameRoom) return _react3.default.createElement(_NotFound2.default, null);
+	      if (!this.props.currentGameRoom || !this.props.currentGameRoom.game) return _react3.default.createElement(_NotFound2.default, null);
 	
 	      return _react3.default.createElement(
 	        'div',

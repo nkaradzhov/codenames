@@ -90,6 +90,7 @@ function joinRoom(id, player, position) {
 }
 
 function getGameState(game, pos) {
+  if(!pos) return game.getGuessState()
   return pos.indexOf('tell') > -1 ? game.getTellState() : game.getGuessState()
 }
 
