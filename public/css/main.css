@@ -5865,12 +5865,16 @@ button.close {
   border: 2px solid #B3B300; }
 
 .card-revealed {
-  text-decoration: line-through;
   background-color: currentColor; }
 
 .card-revealed:hover {
   background-color: var(--base);
   border: 2px solid #9E8E7E; }
+
+.middle-box {
+  display: flex;
+  justify-content: center;
+  margin: 1em; }
 
 .game-status {
   display: flex;

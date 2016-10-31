@@ -19,14 +19,48 @@ module.exports = function(httpServer) {
 
     socket.on('start game', startGame)
 
-    socket.on('disconnect', leave(socket))
+    socket.on('tell', play(tell))
+    socket.on('guess', play(guess))
+    socket.on('pass', play(pass))
 
+    socket.on('disconnect', leave(socket))
   })
+
+  function pass(options, game) {
+    game.pass(options.player)
+  }
+
+  function tell(options, game) {
+    var method = options.player.slot.indexOf('red') > -1 ? 'redTell' : 'blueTell'
+    game[method](options.player, options.hint)
+  }
+  function guess(options, game) {
+    var method = options.player.slot.indexOf('red') > -1 ? 'redGuess' : 'blueGuess'
+    game[method](options.player, options.pos)
+  }
+
+  function play(f) {
+    return function(options) {
+      var room = gameRooms.findRoom(options.roomId)
+      if (!room)
+        return
+      var game = gameRooms.findGame(options.roomId)
+      if (!game)
+        return
+
+      f(options, game)
+
+      broadcastGameState(room)
+    }
+  }
 
   function startGame(options) {
     var room = gameRooms.findRoom(options.roomId)
-    var game = gameRooms.startGame(room.id)
+    gameRooms.startGame(room.id)
+    broadcastGameState(room)
+  }
 
+  function broadcastGameState(room) {
     room.players.forEach(function(p) {
       sendGameState(channel.to(p.player.socketId), room.id, p.position)
     })

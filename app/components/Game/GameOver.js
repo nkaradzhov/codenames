@@ -1,13 +1,7 @@
 import React from 'react';
 
-class GameOver extends React.Component {
+const GameOver = ({win}) => (
+  <h1>You {win}!</h1>
+)
 
-  render() {
-    return (
-      <h1>You {this.props.win}!</h1>
-    )
-  }
-
-}
-
-export default GameOver;
+export default GameOver

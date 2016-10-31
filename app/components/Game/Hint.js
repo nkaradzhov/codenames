@@ -23,24 +23,20 @@ class Hint extends React.Component {
 
   updateHint(event) {
     this.setState(Object.assign({}, this.state, {
-      hint: event.tartget.value
+      hint: event.target.value
     }))
-  }
-
-  hint() {
-    this.props.channel.emit('hint', this.state)
   }
 
   render() {
 
     const inc = this.state.count > 9 ? true : false
     const dec = this.state.count === 0 ?  true : false
+    const hasHint = this.state.hint && this.state.hint.length > 0
 
     const represent = this.state.count === 10 ? 'inf' : this.state.count
 
     return (
-      <div>
-
+      <div className="middle-box">
         <form className="form-inline">
           <div className="form-group">
             <input onKeyUp={this.updateHint.bind(this)} type="text" className="form-control" placeholder="Hint"/>
@@ -49,18 +45,13 @@ class Hint extends React.Component {
               <button type="button" className="btn btn-default" disabled>{represent}</button>
               <button onClick={this.increment.bind(this)} type="button" disabled={inc} className="btn btn-default">+</button>
             </div>
-            <button onClick={this.hint.bind(this)} className="btn btn-primary">Hint</button>
+            <button type="button" onClick={()=> this.props.onHint(this.state)} className="btn btn-primary" disabled={!hasHint}>Hint</button>
           </div>
         </form>
-
       </div>
     )
   }
 
 }
 
-Hint.contextTypes = {
-  channel: React.PropTypes.object
-}
-
-export default Hint
+export default Hint;
