@@ -5,10 +5,16 @@ import NotFound from '../NotFound';
 import GameStatus from './GameStatus';
 import Hint from './Hint';
 import CurrentHint from './CurrentHint';
+import beep from '../../beep';
 
 class Game extends React.Component {
 
   componentWillReceiveProps(nextProps) {
+    if(this.props.currentGameRoom && this.props.currentGameRoom.game) //got game
+      if(this.props.currentGameRoom.game.turn !== nextProps.currentGameRoom.game.turn) //turn changed
+        if(this.props.gamePosition === nextProps.currentGameRoom.game.turn) //will be my turn
+          beep()
+
     if (!this.props.user.socketId && nextProps.user.socketId) {
       console.log('trying to join room ', this.props.gamePosition);
       this.context.channel.emit('join', {
@@ -119,7 +125,6 @@ Game.contextTypes = {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('game', ownProps, ownProps.params);
   return {
     user: state.auth.user,
     currentGameRoom: state.gameRooms.filter(room => room.id === ownProps.params.roomId )[0],
