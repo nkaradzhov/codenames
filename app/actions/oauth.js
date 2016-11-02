@@ -7,11 +7,11 @@ import { browserHistory } from 'react-router';
 // Sign in with Facebook
 export function facebookLogin(afterPath) {
   const facebook = {
-    url: 'http://localhost:3000/auth/facebook',
-    clientId: '980220002068787',
-    redirectUri: 'http://localhost:3000/auth/facebook/callback',
+    url: 'http://codenames.online/auth/facebook',
+    clientId: '1794522694161075',
+    redirectUri: 'http://codenames.online/auth/facebook/callback',
     authorizationUrl: 'https://www.facebook.com/v2.5/dialog/oauth',
-    scope: 'email,user_location',
+    scope: 'email,public_profile',
     width: 580,
     height: 400
   };

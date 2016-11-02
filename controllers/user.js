@@ -117,7 +117,6 @@ exports.accountPut = function(req, res, next) {
       user.email = req.body.email;
       user.name = req.body.name;
       user.gender = req.body.gender;
-      user.location = req.body.location;
       user.website = req.body.website;
     }
     user.save(function(err) {
@@ -285,7 +284,7 @@ exports.resetPost = function(req, res, next) {
  * Sign in with Facebook
  */
 exports.authFacebook = function(req, res) {
-  var profileFields = ['id', 'name', 'email', 'gender', 'location'];
+  var profileFields = ['id', 'name', 'email', 'gender'];
   var accessTokenUrl = 'https://graph.facebook.com/v2.5/oauth/access_token';
   var graphApiUrl = 'https://graph.facebook.com/v2.5/me?fields=' + profileFields.join(',');
 
@@ -337,7 +336,6 @@ exports.authFacebook = function(req, res) {
               name: profile.name,
               email: profile.email,
               gender: profile.gender,
-              location: profile.location && profile.location.name,
               picture: 'https://graph.facebook.com/' + profile.id + '/picture?type=large',
               facebook: profile.id
             });
