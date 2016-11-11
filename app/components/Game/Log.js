@@ -3,20 +3,20 @@ import StylePropTracker from '../misc/StylePropTracker'
 
 const hint = hint => {
   return (
-    <span>{`${hint.hint.toUpperCase()} ${hint.count}`}</span>
+    <b>{`${hint.hint.toUpperCase()} ${hint.count}`}</b>
   )
 }
 
 const guess = card => {
   return (
-    <span className={card.type}>{card.text.toUpperCase()}</span>
+    <b className={card.type}>{card.text.toUpperCase()}</b>
   )
 }
 
 const logItem = (item, i) => {
   return (
     <li key={i}>
-      <b>{item.player.name.substring(0,4)}: </b>
+      <span>{item.player.name.substring(0,4)}: </span>
       {item.action === 'hint'?
         hint(item.hint) :
         item.action === 'guess'?
@@ -40,7 +40,10 @@ const Log = ({log}) => {
       return (
         <div className={containerClass}>
           <ul className={listClass}>
-            {log.map(logItem)}
+            {log.length?
+              log.slice().reverse().map(logItem):
+              <li><p>LOG</p></li>
+            }
           </ul>
         </div>
       )

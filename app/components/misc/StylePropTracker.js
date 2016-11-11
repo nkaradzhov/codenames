@@ -5,7 +5,7 @@ class StylePropTracker extends React.Component {
   constructor(args) {
     super(args)
     this.state = {
-      more: false
+      more: true
     }
   }
 
@@ -15,6 +15,7 @@ class StylePropTracker extends React.Component {
       clearTimeout(me.timeout)
       me.timeout = setTimeout(me.trace.bind(me), me.props.throttle)
     }
+    this.trace()
   }
 
   trace() {
