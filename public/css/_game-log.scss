@@ -1,0 +1,24 @@
+.log-container-left {
+    position: absolute;
+    left: 20px;
+    top: 25%;
+}
+
+.log-container-bottom {
+    display: flex;
+    margin: 2em;
+    justify-content: center;
+}
+
+.log-list {
+    width: 200px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.log-list-bottom {
+    max-height: 150px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
