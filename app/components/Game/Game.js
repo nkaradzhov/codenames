@@ -5,7 +5,8 @@ import NotFound from '../NotFound';
 import GameStatus from './GameStatus';
 import Hint from './Hint';
 import CurrentHint from './CurrentHint';
-import beep from '../../beep';
+import Log from './Log';
+import beep from '../../misc/beep';
 
 class Game extends React.Component {
 
@@ -106,6 +107,7 @@ class Game extends React.Component {
           <div className="middle-box">
             <button onClick={this.onPassClick.bind(this)} className="btn btn-primary" type="button">Pass</button>
           </div>}
+        <Log log={this.props.currentGameRoom.game.log} />
       </div>
     );
 

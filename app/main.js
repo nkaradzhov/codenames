@@ -6,7 +6,8 @@ import { Router, browserHistory } from 'react-router';
 import configureStore from './store/configureStore';
 import getRoutes from './routes';
 import SocketApi from './components/SocketApi'
-import { saveGamePositions, loadGamePositions } from './localStorage'
+import { saveGamePositions, loadGamePositions } from './misc/localStorage'
+import handleResize from './misc/resize'
 
 const store = configureStore(Object.assign({}, window.INITIAL_STATE, {
   gamePositions: loadGamePositions()
@@ -14,28 +15,7 @@ const store = configureStore(Object.assign({}, window.INITIAL_STATE, {
 
 store.subscribe(() => saveGamePositions(store.getState().gamePositions))
 
-(function() {
-  var to
-
-  function calculate() {
-    const board = document.getElementsByClassName('board')[0]
-    if(board) {
-      const style = board.currentStyle || window.getComputedStyle(board);
-      const margin = style.marginLeft //e.g. '202px'
-      const availableWidth = parseFloat(margin.substring(0, margin.length - 2))
-      store.dispatch({
-        type: 'WINDOW_RESIZE',
-        logPosition: availableWidth > 200 ? 'left' : 'bottom'
-      })
-    }
-  }
-
-  window.onresize = function() {
-    clearTimeout(to)
-    to = setTimeout(calculate, 600)
-  }
-
-}());
+handleResize(store)
 
 
 ReactDOM.render(
