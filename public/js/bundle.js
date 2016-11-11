@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fde2fd410dea39fd6865"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c05d97190486f2f02f57"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -32124,6 +32124,7 @@
 	exports.gameRooms = gameRooms;
 	exports.gameRoomAdded = gameRoomAdded;
 	exports.gameRoomUpdated = gameRoomUpdated;
+	exports.gameRoomKilled = gameRoomKilled;
 	exports.gameUpdated = gameUpdated;
 	exports.playerLinked = playerLinked;
 	exports.gamePosition = gamePosition;
@@ -32146,6 +32147,13 @@
 	  return {
 	    type: 'GAMEROOM_UPDATED',
 	    room: room
+	  };
+	}
+	
+	function gameRoomKilled(id) {
+	  return {
+	    type: 'GAMEROOM_KILLED',
+	    id: id
 	  };
 	}
 	
@@ -33996,7 +34004,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      if (!this.props.currentGameRoom || !this.props.currentGameRoom.game) return _react3.default.createElement(_NotFound2.default, null);
+	      if (!this.props.currentGameRoom || !this.props.currentGameRoom.game || !this.props.currentGameRoom.game.cards) return _react3.default.createElement(_NotFound2.default, null);
 	
 	      var isMyTurn = this.isMyTurn();
 	      var isTell = this.isTell();
@@ -34553,7 +34561,15 @@
 	        _react2.default.createElement(
 	          'ul',
 	          { className: listClass },
-	          log.slice().reverse().map(logItem)
+	          log.length ? log.slice().reverse().map(logItem) : _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'LOG'
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -35415,6 +35431,19 @@
 	  };
 	}
 	
+	var getStatus = function getStatus(r) {
+	  return r.game ? r.game.winner ? 'finished' : 'playing' : 'idle';
+	};
+	
+	var canKill = function canKill(r) {
+	  return !r.players.length || r.game && r.game.winner;
+	};
+	var canLeave = function canLeave(r, pid) {
+	  return !!r.players.filter(function (p) {
+	    return p.player._id === pid;
+	  }).length;
+	};
+	
 	var Lobby = _wrapComponent('Lobby')(function (_React$Component) {
 	  _inherits(Lobby, _React$Component);
 	
@@ -35428,6 +35457,16 @@
 	    key: 'createGameRoom',
 	    value: function createGameRoom() {
 	      this.context.channel.emit('create');
+	    }
+	  }, {
+	    key: 'killRoom',
+	    value: function killRoom(id) {
+	      this.context.channel.emit('kill', id);
+	    }
+	  }, {
+	    key: 'leaveRoom',
+	    value: function leaveRoom(id) {
+	      this.context.channel.emit('leave', id, this.props.playerId);
 	    }
 	  }, {
 	    key: 'roomPlayers',
@@ -35469,6 +35508,16 @@
 	              'th',
 	              null,
 	              'Players'
+	            ),
+	            _react3.default.createElement(
+	              'th',
+	              null,
+	              'Status'
+	            ),
+	            _react3.default.createElement(
+	              'th',
+	              null,
+	              'Actions'
 	            )
 	          )
 	        ),
@@ -35497,6 +35546,30 @@
 	                'td',
 	                null,
 	                _this2.roomPlayers(r.players)
+	              ),
+	              _react3.default.createElement(
+	                'td',
+	                null,
+	                getStatus(r)
+	              ),
+	              _react3.default.createElement(
+	                'td',
+	                null,
+	                canLeave(r, _this2.props.playerId) ? _react3.default.createElement(
+	                  'button',
+	                  { onClick: function onClick() {
+	                      return _this2.leaveRoom(r.id);
+	                    }, className: 'btn btn-secondary' },
+	                  'Leave'
+	                ) : '',
+	                canKill(r) ? _react3.default.createElement(
+	                  'button',
+	                  { onClick: function onClick() {
+	                      return _this2.killRoom(r.id);
+	                    }, className: 'btn btn-secondary' },
+	                  'Kill'
+	                ) : '',
+	                !canKill(r) && !canLeave(r, _this2.props.playerId) ? 'N/A' : ''
 	              )
 	            );
 	          })
@@ -35543,7 +35616,8 @@
 	
 	var mapStateToProps = function mapStateToProps(state, ownProps) {
 	  return {
-	    gameRooms: state.gameRooms
+	    gameRooms: state.gameRooms,
+	    playerId: state.auth.user._id
 	  };
 	};
 	
@@ -35633,6 +35707,9 @@
 	      return _this.props.dispatch((0, _socketapi.gameRoomAdded)(room));
 	    });
 	    _this.channel.on('room updated', _this.updateRoom.bind(_this));
+	    _this.channel.on('room killed', function (id) {
+	      return _this.props.dispatch((0, _socketapi.gameRoomKilled)(id));
+	    });
 	    _this.channel.on('game updated', function (obj) {
 	      return _this.props.dispatch((0, _socketapi.gameUpdated)(obj));
 	    });
@@ -36069,8 +36146,10 @@
 	      return state.map(function (r) {
 	        return gameRoom(r, action);
 	      });
-	    // case 'GAMEROOMS_UPDATED':
-	    //   return replaceAll(select, state, action.rooms)
+	    case 'GAMEROOM_KILLED':
+	      return state.filter(function (r) {
+	        return r.id != action.id;
+	      });
 	    default:
 	      return state;
 	  }

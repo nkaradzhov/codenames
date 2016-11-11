@@ -11,6 +11,8 @@ module.exports = function(httpServer) {
     socket.emit('rooms', gameRooms.getRooms())
     socket.on('create', create)
     socket.on('join', join(socket))
+    socket.on('kill', kill)
+    socket.on('leave', leaveSingle)
     socket.on('become observer', become(socket, 'observer'))
     socket.on('become red-tell', become(socket, 'red-tell'))
     socket.on('become red-guess', become(socket, 'red-guess'))
@@ -26,6 +28,17 @@ module.exports = function(httpServer) {
     socket.on('disconnect', leave(socket))
   })
 
+  function leaveSingle(roomId, playerId) {
+    var room = gameRooms.leaveRoom(roomId, playerId)
+    if (room)
+      channel.emit('room updated', room)
+  }
+
+  function kill(id) {
+    gameRooms.killRoom(id)
+    channel.emit('room killed', id)
+  }
+
   function pass(options, game) {
     game.pass(options.player)
   }
@@ -34,6 +47,7 @@ module.exports = function(httpServer) {
     var method = options.player.slot.indexOf('red') > -1 ? 'redTell' : 'blueTell'
     game[method](options.player, options.hint)
   }
+
   function guess(options, game) {
     var method = options.player.slot.indexOf('red') > -1 ? 'redGuess' : 'blueGuess'
     game[method](options.player, options.pos)
@@ -50,14 +64,25 @@ module.exports = function(httpServer) {
 
       f(options, game)
 
+      updateWinner(room, game.winner)
       broadcastGameState(room)
     }
   }
 
   function startGame(options) {
     var room = gameRooms.findRoom(options.roomId)
-    gameRooms.startGame(room.id)
+    var game = gameRooms.startGame(room.id)
+    updateWinner(room, game.winner)
     broadcastGameState(room)
+  }
+
+  function updateWinner(room, winner) {
+    channel.emit('game updated', {
+      roomId: room.id,
+      game: {
+        winner: winner
+      }
+    })
   }
 
   function broadcastGameState(room) {

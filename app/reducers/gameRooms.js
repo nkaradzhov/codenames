@@ -40,8 +40,8 @@ export default function gameRooms(state = [], action) {
       return state.map(r => gameRoom(r, action))
     case 'GAME_UPDATED':
       return state.map(r => gameRoom(r, action))
-        // case 'GAMEROOMS_UPDATED':
-        //   return replaceAll(select, state, action.rooms)
+    case 'GAMEROOM_KILLED':
+      return state.filter(r => r.id != action.id)
     default:
       return state;
   }

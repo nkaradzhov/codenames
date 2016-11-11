@@ -82,7 +82,9 @@ class Game extends React.Component {
   }
 
   render() {
-    if(!this.props.currentGameRoom || !this.props.currentGameRoom.game)
+    if(!this.props.currentGameRoom
+        || !this.props.currentGameRoom.game
+        || !this.props.currentGameRoom.game.cards)
       return <NotFound />
 
     const isMyTurn = this.isMyTurn()

@@ -14,11 +14,19 @@ module.exports = {
   getRooms: getRooms,
   joinRoom: joinRoom,
   leaveRooms: leaveRooms,
+  leaveRoom: leaveRoom,
   updatePlayerPosition: updatePlayerPosition,
   findGame: findGame,
   startGame: startGame,
   getGameState: getGameState,
+  killRoom: killRoom,
 };
+
+function killRoom(id) {
+  rooms = rooms.filter(function(room) {
+    return room.id != id
+  })
+}
 
 function findGame(roomId) {
   return games[roomId]
@@ -51,6 +59,17 @@ function updatePlayerPosition(roomId, playerId, position) {
     player.position = position
 
   return room
+}
+
+function leaveRoom(roomId, playerId) {
+  var room = findRoom(roomId)
+  if(room) {
+    room.players = room.players.filter(function(p) {
+      return p.player._id !== playerId
+    })
+    return room
+  }
+  return false
 }
 
 function leaveRooms(socketId) {

@@ -19,6 +19,13 @@ export function gameRoomUpdated(room) {
   }
 }
 
+export function gameRoomKilled(id) {
+  return {
+    type: 'GAMEROOM_KILLED',
+    id: id
+  }
+}
+
 export function gameUpdated(obj) {
   return {
     type: 'GAME_UPDATED',
