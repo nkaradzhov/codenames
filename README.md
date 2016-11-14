@@ -1,4 +1,3 @@
-## Mega Boilerplate App (Node.js)
 
 ### Configuration
 - **Platform:** node
