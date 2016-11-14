@@ -1,6 +1,5 @@
 ## Mega Boilerplate App (Node.js)
 
-
 ### Configuration
 - **Platform:** node
 - **Framework**: express
