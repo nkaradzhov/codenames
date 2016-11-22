@@ -1,10 +1,17 @@
 var gameRooms = require('./gamerooms')
 
+
 module.exports = function(httpServer) {
 
   var channel = require('socket.io')
     .listen(httpServer)
     .of('/gameRooms');
+
+  function sendHeartbeat() {
+    setTimeout(sendHeartbeat, 8000);
+    channel.emit('ping', { beat: 1 });
+  }
+  setTimeout(sendHeartbeat, 8000)
 
   channel.on('connection', function(socket) {
     console.log('new connection ', socket.id);
