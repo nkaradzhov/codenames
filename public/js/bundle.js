@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d5c593315e2ed7544670"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ed959d7166b5082309e7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -35217,6 +35217,10 @@
 	  };
 	}
 	
+	var username = function username(user) {
+	  return user && user.name || 'stranger';
+	};
+	
 	var Home = _wrapComponent('Home')(function (_React$Component) {
 	  _inherits(Home, _React$Component);
 	
@@ -35238,14 +35242,16 @@
 	          { className: 'row' },
 	          _react3.default.createElement(
 	            'div',
-	            { className: 'jumbotron' },
+	            { className: 'jumbotron jumbotron-image' },
 	            _react3.default.createElement(
 	              'div',
 	              { className: 'container' },
 	              _react3.default.createElement(
 	                'h1',
 	                null,
-	                'Hello, stranger!'
+	                'Hello, ',
+	                username(this.props.user),
+	                '!'
 	              ),
 	              _react3.default.createElement(
 	                'p',
@@ -35275,17 +35281,12 @@
 	                _react3.default.createElement(
 	                  'h3',
 	                  null,
-	                  'Heading'
+	                  'Game Overview'
 	                ),
 	                _react3.default.createElement(
 	                  'p',
 	                  null,
 	                  'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.'
-	                ),
-	                _react3.default.createElement(
-	                  'a',
-	                  { href: '#', role: 'button', className: 'btn btn-default' },
-	                  'View details'
 	                )
 	              )
 	            )
@@ -35302,17 +35303,12 @@
 	                _react3.default.createElement(
 	                  'h3',
 	                  null,
-	                  'Heading'
+	                  'Gameplay'
 	                ),
 	                _react3.default.createElement(
 	                  'p',
 	                  null,
-	                  'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.'
-	                ),
-	                _react3.default.createElement(
-	                  'a',
-	                  { href: '#', role: 'button', className: 'btn btn-default' },
-	                  'View details'
+	                  'If you are the spymaster, you are trying to think of a one-word clue that relates to some of the words your team is trying to guess. When you think you have a good clue, you say it. You also say one number, which tells your teammates how many codenames are related to your clue. Example: Two of your words are NUT and BARK. Both of these grow on trees, so you say tree: 2. You are allowed to give a clue for only one word (cashew: 1) but its fun to try for two or more. Getting four words with one clue is a big accomplishment.'
 	                )
 	              )
 	            )
@@ -35329,17 +35325,12 @@
 	                _react3.default.createElement(
 	                  'h3',
 	                  null,
-	                  'Heading'
+	                  'Game Flow'
 	                ),
 	                _react3.default.createElement(
 	                  'p',
 	                  null,
-	                  'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.'
-	                ),
-	                _react3.default.createElement(
-	                  'a',
-	                  { href: '#', role: 'button', className: 'btn btn-default' },
-	                  'View details'
+	                  'Spymasters take turns giving clues. After a spymaster gives a clue, his or her team starts guessing. Their turn ends when they guess wrong, when they decide to stop, or when they have made the maximum number of guesses for that clue. Then it is the other teams turn'
 	                )
 	              )
 	            )
@@ -35354,7 +35345,8 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	  return {
-	    messages: state.messages
+	    messages: state.messages,
+	    user: state.auth.user
 	  };
 	};
 	

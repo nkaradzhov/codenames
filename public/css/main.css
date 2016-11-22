@@ -5952,6 +5952,20 @@ button.close {
   overflow: hidden;
   overflow-y: scroll; }
 
+.jumbotron-image {
+  background-image: url("/img/codenames.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  /*  should not be here */
+  text-align: center;
+  color: white;
+  border-radius: 0; }
+
+.jumbotron-image h1 {
+  background: rgba(0, 0, 0, 0.2);
+  display: inline; }
+
 .red {
   color: tomato; }
 
@@ -6010,7 +6024,12 @@ footer {
 .panel-heading + .panel-body {
   padding-top: 0; }
 
-.panel-body h1, .panel-body h2, .panel-body h3, .panel-body h4, .panel-body h5, .panel-body h6 {
+.panel-body h1,
+.panel-body h2,
+.panel-body h3,
+.panel-body h4,
+.panel-body h5,
+.panel-body h6 {
   margin-top: 0; }
 
 .panel-title {
@@ -6052,7 +6071,7 @@ footer {
   border-color: #335190;
   background: #3b5998 linear-gradient(to bottom, #4263a9, #3b5998);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(59, 89, 152, 0.3); }
-  .btn-facebook:hover, .btn-facebook:focus {
+  .btn-facebook:focus, .btn-facebook:hover {
     color: #fff; }
 
 .btn-twitter {
@@ -6060,7 +6079,7 @@ footer {
   border-color: #009fdb;
   background: #00aced linear-gradient(to bottom, #05baff, #00aced);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(0, 172, 237, 0.3); }
-  .btn-twitter:hover, .btn-twitter:focus {
+  .btn-twitter:focus, .btn-twitter:hover {
     color: #fff; }
 
 .btn-google {
@@ -6068,7 +6087,7 @@ footer {
   border-color: #d54331;
   background: #dd4b39 linear-gradient(to bottom, #e05d4d, #dd4b39);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(221, 75, 57, 0.3); }
-  .btn-google:hover, .btn-google:focus {
+  .btn-google:focus, .btn-google:hover {
     color: #fff; }
 
 .btn-vk {
@@ -6076,7 +6095,7 @@ footer {
   border-color: #4f7192;
   background: #587ea3 linear-gradient(to bottom, #678aad, #587ea3);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(79, 113, 146, 0.3); }
-  .btn-vk:hover, .btn-vk:focus {
+  .btn-vk:focus, .btn-vk:hover {
     color: #fff; }
 
 .btn-github {
@@ -6084,7 +6103,7 @@ footer {
   border-color: #444;
   background: #545454 linear-gradient(to bottom, #616161, #545454);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(68, 68, 68, 0.3); }
-  .btn-github:hover, .btn-github:focus {
+  .btn-github:focus, .btn-github:hover {
     color: #fff; }
 
 textarea {
