@@ -49,6 +49,8 @@ class Header extends React.Component {
               <li><IndexLink to="/" activeStyle={active}>Home</IndexLink></li>
               <li><Link to="/lobby" activeStyle={active}>Lobby</Link></li>
               <li><Link to="/contact" activeStyle={active}>Contact</Link></li>
+              <li><a href="https://github.com/hukuuu/codenames">Github</a></li>
+
             </ul>
             {rightNav}
           </div>
