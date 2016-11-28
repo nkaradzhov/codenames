@@ -22,9 +22,15 @@ class Home extends React.Component {
             <div className="panel">
               <div className="panel-body">
                 <h3>Game Overview</h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
-                  mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
-                  mollis euismod. Donec sed odio dui.</p>
+                <p>
+                    Spymasters know the secret identities of 25 agents. Their teammates know the agents only by their
+                    codenames.
+                    Spymasters take turns giving one-word clues. A clue may relate to multiple words on the table. The field
+                    operatives try to guess which words their spymaster meant. When a field operative touches a word, the
+                    spymaster reveals its secret identity. If the field operatives guess correctly, they may continue guessing,
+                    until they run out of ideas for the given clue or until they hit a wrong person. Then it is the other teams
+                    turn to give a clue and guess. The first team to contact all their agents wins the game.
+                </p>
               </div>
             </div>
           </div>
