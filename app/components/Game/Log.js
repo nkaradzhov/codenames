@@ -1,9 +1,10 @@
 import React from 'react'
 import StylePropTracker from '../misc/StylePropTracker'
+import {hintRep} from '../misc/Utils'
 
 const hint = hint => {
   return (
-    <b>{`${hint.hint.toUpperCase()} ${hint.count}`}</b>
+    <b>{hintRep(hint)}</b>
   )
 }
 
