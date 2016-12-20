@@ -15,7 +15,7 @@ class Header extends React.Component {
       <ul className="nav navbar-nav navbar-right">
         <li className="dropdown">
           <a href="#" data-toggle="dropdown" className="navbar-avatar dropdown-toggle">
-            <img src={this.props.user.picture || this.props.user.gravatar}/>
+            {/* <img src={this.props.user.picture || this.props.user.gravatar}/> */}
             {' '}{this.props.user.name || this.props.user.email || this.props.user.id}{' '}
             <i className="caret"></i>
           </a>
