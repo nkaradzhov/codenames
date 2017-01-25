@@ -7,7 +7,6 @@ const neutral = 'neutral'
 
 class Game {
 
-
   constructor(cards) {
     this.cards = cards
     const initialState = this._computeInitialState(this.cards)
@@ -30,70 +29,67 @@ class Game {
   getGuessState() {
     const state = this._getState()
     if (!this.winner)
-      state.cards = this.cards.map(
-        c => ({
-          text: c.text,
-          pos: c.pos,
-          revealed: c.revealed,
-          type: c.revealed ? c.type : undefined
-        }))
+      state.cards = this.cards.map(c => ({
+        text: c.text,
+        pos: c.pos,
+        revealed: c.revealed,
+        type: c.revealed
+          ? c.type
+          : undefined
+      }))
     return state
   }
 
   redTell(player, hint) {
-    this._validateGameTurn('red-tell')
-    this._validatePlayerTurn(player)
-    this.redHint = hint
-    this.redHint.left = this._getCountValue(hint.count)
-    this._logTell(player, hint)
-    this.turn = 'red-guess'
+    if (this._validateGameTurn('red-tell') && this._validatePlayerTurn(player)) {
+      this.redHint = hint
+      this.redHint.left = this._getCountValue(hint.count)
+      this._logTell(player, hint)
+      this.turn = 'red-guess'
+    }
   }
 
   blueTell(player, hint) {
-    this._validateGameTurn('blue-tell')
-    this._validatePlayerTurn(player)
-    this.blueHint = hint
-    this.blueHint.left = this._getCountValue(hint.count)
-    this._logTell(player, hint)
-    this.turn = 'blue-guess'
+    if (this._validateGameTurn('blue-tell') && this._validatePlayerTurn(player)) {
+      this.blueHint = hint
+      this.blueHint.left = this._getCountValue(hint.count)
+      this._logTell(player, hint)
+      this.turn = 'blue-guess'
+    }
   }
 
   redGuess(player, pos) {
-    this._validateGameTurn('red-guess')
-    this._validatePlayerTurn(player)
-    this._revealCard(pos)
-    this._logGuess(player, this._findCard(pos))
-    this._computeWinner()
+    if (this._validateGameTurn('red-guess') && this._validatePlayerTurn(player)) {
+      this._revealCard(pos)
+      this._logGuess(player, this._findCard(pos))
+      this._computeWinner()
 
-    this.redHint.left--
-
-      if (this._findCard(pos)
-        .type !== 'red' || this.redHint.left === 0)
+      this.redHint.left--;
+      if (this._findCard(pos).type !== 'red' || this.redHint.left === 0)
         this.turn = 'blue-tell'
+    }
   }
 
   blueGuess(player, pos) {
-    this._validateGameTurn('blue-guess')
-    this._validatePlayerTurn(player)
-    this._revealCard(pos)
-    this._logGuess(player, this._findCard(pos))
-    this._computeWinner()
+    if (this._validateGameTurn('blue-guess') && this._validatePlayerTurn(player)) {
+      this._revealCard(pos)
+      this._logGuess(player, this._findCard(pos))
+      this._computeWinner()
 
-    this.blueHint.left--
-
-      if (this._findCard(pos)
-        .type !== 'blue' || this.blueHint.left === 0)
+      this.blueHint.left--;
+      if (this._findCard(pos).type !== 'blue' || this.blueHint.left === 0)
         this.turn = 'red-tell'
+    }
   }
 
   pass(player) {
-    this._validateGameTurn('blue-guess', 'red-guess')
-    this._validatePlayerTurn(player)
-    this._logPass(player)
-    if (this.turn === 'blue-guess')
-      this.turn = 'red-tell'
-    if (this.turn === 'red-guess')
-      this.turn = 'blue-tell'
+    if (this._validateGameTurn('blue-guess', 'red-guess') && this._validatePlayerTurn(player)) {
+      this._logPass(player)
+      if (this.turn === 'blue-guess')
+        this.turn = 'red-tell'
+      if (this.turn === 'red-guess')
+        this.turn = 'blue-tell'
+    }
   }
 
   _getState() {
@@ -109,22 +105,24 @@ class Game {
   }
 
   _validatePlayerTurn(player) {
-    if (player.slot !== this.turn)
-      throw new Error(`Not your turn, ${player.name}...`)
+    return player.slot === this.turn
+    // if (player.slot !== this.turn)
+    // throw new Error(`Not your turn, ${player.name}...`)
   }
 
   _validateGameTurn() {
     let safe = false
     const turn = this.turn
     console.log('game turn:', turn);
-    [].forEach.call(arguments, function(action) {
+    [].forEach.call(arguments, function (action) {
       console.log('action:', action)
       if (turn == action)
         safe = true
     })
-    if (!safe) {
-      throw new Error(`Invalid state: game turn is ${this.turn}`)
-    }
+    return safe
+    // if (!safe) {
+    // throw new Error(`Invalid state: game turn is ${this.turn}`)
+    // }
   }
 
   _getCountValue(count) {
@@ -135,25 +133,26 @@ class Game {
 
   _computeWinner() {
 
-    const revealed = this.cards.filter(
-      c => c.revealed
-    )
+    const revealed = this.cards.filter(c => c.revealed)
 
     let reds = 0
     let blues = 0
     let assassins = 0
 
     revealed.forEach(c => {
-      if (c.type === assassin)
-        assassins++
-        if (c.type === red)
-          reds++
-          if (c.type === blue)
-            blues++
-    })
+      if (c.type === assassin) 
+        assassins++;
+      if (c.type === red)
+        reds++;
+      if (c.type === blue)
+        blues++
+      }
+    )
 
     if (assassins === 1) {
-      this.winner = this.turn === 'blue-guess' ? 'red' : 'blue'
+      this.winner = this.turn === 'blue-guess'
+        ? 'red'
+        : 'blue'
       return
     }
 
@@ -177,11 +176,9 @@ class Game {
       }
     }
 
-
     this.winner = false
 
   }
-
 
   _revealCard(pos) {
     const card = this._findCard(pos)
@@ -194,48 +191,25 @@ class Game {
   }
 
   _findCard(pos) {
-    return this.cards.filter(
-      card => card.pos === pos
-    )[0]
+    return this.cards.filter(card => card.pos === pos)[0]
   }
 
   _computeInitialState(cards) {
-    const redCards = cards.filter(card => card.type === red)
-      .length
+    const redCards = cards.filter(card => card.type === red).length
     if (redCards === 9)
-      return {
-        turn: 'red-tell',
-        first: 'red'
-      }
+      return {turn: 'red-tell', first: 'red'}
     else
-      return {
-        turn: 'blue-tell',
-        first: 'blue'
-      }
-  }
+      return {turn: 'blue-tell', first: 'blue'}
+    }
 
   _logPass(player) {
-    this.log.push({
-      action: 'pass',
-      timestamp: Date.now(),
-      player: player
-    })
+    this.log.push({action: 'pass', timestamp: Date.now(), player: player})
   }
   _logGuess(player, card) {
-    this.log.push({
-      action: 'guess',
-      timestamp: Date.now(),
-      player: player,
-      card: card
-    })
+    this.log.push({action: 'guess', timestamp: Date.now(), player: player, card: card})
   }
   _logTell(player, hint) {
-    this.log.push({
-      action: 'hint',
-      timestamp: Date.now(),
-      player: player,
-      hint: hint
-    })
+    this.log.push({action: 'hint', timestamp: Date.now(), player: player, hint: hint})
   }
 
 }
